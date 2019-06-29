@@ -1,0 +1,115 @@
+.compas-description {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 6%;
+  padding-bottom: 75px;
+
+  &-block {
+    width: 32%;
+    height: auto;
+
+    &-img {
+      .compas-img {
+        width: 550px;
+      }
+    }
+    &-h3 {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 27px;
+      text-transform: uppercase;
+      color: #222222;
+      padding-top: 20px;
+    }
+    &-p {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 25px;
+      letter-spacing: 0.03em;
+      color: rgba(34, 34, 34, 0.8);
+      padding-top: 20px;
+    }
+    &-li {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 25px;
+      letter-spacing: 0.03em;
+      color: rgba(34, 34, 34, 0.8);
+
+      &:first-child {
+        padding-top: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .compas-description {
+    flex-direction: column;
+    padding-top: 0;
+
+    &-block {
+      width: 100%;
+      height: auto;
+      padding-left: 3.4%;
+      padding-top: 0;
+
+      &-img {
+        @include defaultFlex();
+        justify-content: center;
+        .compas-img {
+          width: 100%;
+          padding-top: 40px;
+        }
+      }
+      &-h3 {
+        padding-top: 37px;
+      }
+      &-p {
+        padding-top: 10px;
+        font-size: 16px;
+        line-height: 25px;
+      }
+      &-li {
+        font-size: 16px;
+        line-height: 25px;
+        &:first-child {
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .compas-description {
+    flex-direction: column;
+
+    &-block {
+      width: 100%;
+      height: auto;
+      padding-left: 3.4%;
+
+      &-img {
+        .compas-img {
+          width: 688px;
+        }
+      }
+      &-h3 {
+        padding-top: 34px;
+        font-size: 12px;
+        line-height: 15px;
+      }
+      &-p {
+        padding-top: 5px;
+        font-size: 12px;
+        line-height: 20px;
+      }
+      &-li {
+        font-size: 12px;
+        line-height: 25px;
+      }
+    }
+  }
+}

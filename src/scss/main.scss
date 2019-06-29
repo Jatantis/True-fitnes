@@ -1,0 +1,57 @@
+@import "utils/fonts";
+@import "utils/reset";
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+
+//UI
+@import "ui/index";
+
+//HEADER
+@import "page/header/index";
+
+//MAIN
+@import "page/main/index";
+
+//FOOTER
+@import "page/footer/index";
+
+//MODAL
+@import "page/modal/index";
+
+//breadcrumbs
+@import "page/breadcrumbs/index";
+
+body {
+  font-family: "Montserrat", "sans-serif";
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .flex-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    &__icon {
+      margin-bottom: 15px;
+    }
+    &__text {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 20px;
+      width: 120px;
+    }
+  }
+}

@@ -1,0 +1,325 @@
+.main-blog-page {
+  @include defaultContainer();
+  @include defaultFlex();
+
+  .blog-page-svg {
+    width: 50px;
+  }
+  .breadcrumbs {
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  &-h1 {
+    width: 100%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 55px;
+    text-transform: uppercase;
+    color: #222222;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+
+  &-main {
+    @include defaultFlexСolumn();
+    width: 73%;
+
+    &-img {
+      width: 100%;
+    }
+    &-comment {
+      @include defaultFlex();
+      width: 100%;
+
+      &-logo {
+        width: 29%;
+        @include defaultFlex();
+        padding-left: 2%;
+        padding-top: 4%;
+
+        .Artem-Gusev-div {
+          width: 55%;
+          padding-left: 13%;
+        }
+      }
+
+      &-description {
+        padding-top: 4%;
+        width: 70%;
+        @include defaultFlex();
+        &-name {
+          width: 100%;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 30px;
+          letter-spacing: 0.03em;
+          color: #222222;
+        }
+        &-who {
+          width: 100%;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 25px;
+          letter-spacing: 0.03em;
+          text-transform: uppercase;
+          color: #323232;
+          padding-top: 1%;
+        }
+        &-text {
+          width: 87%;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 25px;
+          letter-spacing: 0.03em;
+          color: #646363;
+          padding-top: 2%;
+        }
+
+        &-svg {
+          @include defaultFlexСolumn();
+          justify-content: flex-end;
+          width: 13%;
+          padding-top: 4%;
+        }
+      }
+    }
+    &-text {
+      width: 100%;
+      padding-top: 7%;
+
+      &-h2 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 35px;
+        line-height: 43px;
+        text-transform: uppercase;
+        color: #222222;
+        padding-bottom: 3%;
+      }
+      &-p {
+        padding-bottom: 5%;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.03em;
+        color: rgba(34, 34, 34, 0.8);
+      }
+    }
+  }
+}
+@media (max-width: 1750px) {
+  .main-blog-page {
+    @include default-padding();
+  }
+}
+
+@media (max-width: 1023px) {
+  .main-blog-page {
+    padding-left: 5%;
+    padding-right: 3%;
+
+    .blog-page-svg {
+      width: 42px;
+    }
+    .breadcrumbs {
+      margin-top: 0px;
+    }
+
+    &-h1 {
+      font-size: 30px;
+      line-height: 37px;
+      padding-bottom: 2%;
+    }
+
+    &-main {
+      width: 100%;
+
+      &-comment {
+        &-description {
+          &-name {
+            font-size: 18px;
+            line-height: 30px;
+          }
+          &-who {
+            display: none;
+          }
+          &-text {
+            font-size: 16px;
+            line-height: 20px;
+          }
+
+          &-svg {
+            @include defaultFlex();
+            justify-content: flex-end;
+            width: 100%;
+            padding-top: 0%;
+            align-items: flex-start;
+            align-content: flex-start;
+          }
+        }
+      }
+      &-text {
+        &-h2 {
+          font-size: 20px;
+          line-height: 24px;
+          padding-top: 3%;
+        }
+        &-p {
+          font-size: 16px;
+          line-height: 22px;
+          padding-bottom: 3%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .main-blog-page {
+    padding-left: 8%;
+
+    .main-blog-page-main-comment-logo .Artem-Gusev-div {
+      width: 60%;
+    }
+    .main-blog-page-main-comment-description-text {
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    .blog-page-svg {
+      padding-bottom: 35px;
+      width: 24px;
+    }
+
+    .breadcrumbs {
+      margin-top: 27px;
+    }
+
+    &-h1 {
+      padding-top: 8%;
+      font-size: 20px;
+      line-height: 24px;
+      padding-bottom: 5%;
+    }
+
+    &-main {
+      &-img {
+        &-logo {
+          min-height: 140px;
+          width: auto;
+          object-fit: cover;
+        }
+      }
+      &-text {
+        &-h2 {
+          font-size: 12px;
+          line-height: 15px;
+          padding-top: 9%;
+        }
+
+        &-p {
+          font-size: 12px;
+          line-height: 23px;
+          padding-bottom: 22px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .main-blog-page {
+    padding-left: 8%;
+
+    .main-blog-page-main-comment-logo .Artem-Gusev-div {
+      width: 91%;
+    }
+    .blog-page-svg {
+      padding-bottom: 35px;
+      width: 24px;
+    }
+
+    .breadcrumbs {
+      margin-top: 27px;
+    }
+
+    &-h1 {
+      padding-top: 8%;
+      font-size: 20px;
+      line-height: 24px;
+      padding-bottom: 5%;
+    }
+
+    &-main {
+      &-img {
+        &-logo {
+          min-height: 140px;
+          width: auto;
+          object-fit: cover;
+        }
+      }
+      &-comment {
+        &-logo {
+          width: 100%;
+          padding-left: 0%;
+          padding-top: 65px;
+          @include defaultFlex();
+          justify-content: center;
+
+          .Artem-Gusev-div {
+            padding-left: 0;
+            @include defaultFlex();
+            justify-content: center;
+
+            &-img {
+              position: relative;
+              right: 20px;
+              height: 78px;
+            }
+          }
+        }
+        &-description {
+          padding-top: 13px;
+          width: 100%;
+          &-name {
+            @include defaultFlex();
+            justify-content: center;
+            font-size: 16px;
+            line-height: 30px;
+          }
+
+          &-text {
+            width: 100%;
+            font-size: 12px;
+            line-height: 20px;
+            padding-top: 12px;
+          }
+          &-svg {
+            @include defaultFlex();
+            justify-content: flex-end;
+            width: 100%;
+            padding-top: 0%;
+            align-items: flex-start;
+            align-content: flex-start;
+          }
+        }
+      }
+      &-text {
+        padding-top: 20%;
+        &-h2 {
+          font-size: 12px;
+          line-height: 15px;
+          padding-top: 9%;
+        }
+        &-p {
+          font-size: 12px;
+          line-height: 23px;
+          padding-bottom: 22px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.modal-service {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .modal-service-message {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    width: 800px;
+    height: 350px;
+    background-color: #fff;
+    padding-left: 6.5%;
+    padding-right: 5%;
+
+    &-p {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 27px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #222222;
+      padding-bottom: 30px;
+    }
+    &-button {
+
+    }
+  }
+}

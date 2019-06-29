@@ -1,0 +1,71 @@
+.button {
+  cursor: pointer;
+  width: 270px;
+  height: 60px;
+  padding-top: 19px;
+  text-align: center;
+  color: #fff;
+  background-color: #2ebfb1;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+//Нагугленный способ добавки отдельных стилей для IE11
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  // .button {
+  // 	background: #000;
+  // }
+}
+
+//show all
+
+.button-show-all {
+  width: 100%;
+
+  &-button {
+    position: relative;
+    bottom: 12px;
+    width: 100%;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    height: 50px;
+    background-color: #2ebfb1;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 19px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .button-show-all {
+    width: 100%;
+
+    &-button {
+      font-size: 14px;
+      line-height: 25px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .button-show-all {
+    width: 100%;
+
+    &-button {
+      font-size: 12px;
+      line-height: 15px;
+      height: 40px;
+    }
+  }
+}

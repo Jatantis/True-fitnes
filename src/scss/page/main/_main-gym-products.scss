@@ -1,0 +1,257 @@
+.gym-products {
+  max-width: 1720px;
+  margin-top: 1%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100%;
+  &-section {
+    cursor: pointer;
+    height: 493px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    width: 49.7%;
+    &:last-child {
+      .products-img-fon .gym-products-text .products-name h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 4px;
+        background: #fff;
+      }
+
+      .products-img-fon .gym-products-text .products-descripion {
+        opacity: 0;
+      }
+    }
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    transition: 0.5s linear 0.1s;
+  }
+}
+
+.products {
+  &-img {
+    &-cardio {
+      background-image: url("/assets/img/gym-products-section-img/cardio.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      position: initial;
+    }
+    &-power {
+      background-image: url("/assets/img/gym-products-section-img/power.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      position: initial;
+    }
+    &-stretching {
+      background-image: url("/assets/img/gym-products-section-img/stretching.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      position: initial;
+    }
+    &-group {
+      background-image: url("/assets/img/gym-products-section-img/group.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      position: initial;
+    }
+    &-technology {
+      background-image: url("/assets/img/gym-products-section-img/technology.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      position: initial;
+    }
+    &-fon {
+      background-color: #2ebfb1;
+      width: 100%;
+      height: 100%;
+      position: initial;
+    }
+  }
+
+  &-name {
+    transition: 0.2s linear;
+    padding-bottom: 80px;
+    padding-left: 12%;
+    max-width: 400px;
+
+    & h2 {
+      display: inline;
+      font-weight: 900;
+      font-size: 45px;
+      line-height: 75px;
+      top: 204.5px;
+      text-transform: uppercase;
+      color: #fff;
+      position: relative;
+      padding-bottom: 9px;
+      transition: 0.2s linear 0.1s;
+      z-index: 1;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 4px;
+        z-index: -1;
+        background: #2ebfb1;
+        transition: 0.2s linear;
+      }
+    }
+  }
+
+  &-descripion {
+    font-family: Montserrat;
+    font-style: normal;
+    opacity: 0;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    width: 70%;
+    position: relative;
+    padding-left: 12%;
+    bottom: 2.5%;
+    transition: 0.1s linear 0.1s;
+  }
+}
+
+.section-hover:hover {
+  .gym-products-text {
+    background-color: rgba(0, 0, 0, 0.2);
+    justify-content: center;
+
+    .products-name h2 {
+      top: 65px;
+
+      &::after {
+        bottom: 65px;
+      }
+    }
+    .products-descripion {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .gym-products {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    margin-top: 2.1%;
+
+    &-section {
+      padding-top: 0px;
+      width: 95.7%;
+      height: 393px;
+      margin-left: 16px;
+      margin-top: 4.4px;
+    }
+
+    &-text {
+      justify-content: center;
+    }
+  }
+
+  .products {
+    &-name {
+      padding-bottom: 21px;
+      padding-left: 7.3%;
+      padding-top: 20%;
+
+      h2 {
+        font-size: 40px;
+        line-height: 36px;
+        padding-bottom: 9px;
+        letter-spacing: 0.01em;
+        top: 0;
+        &::after {
+          height: 6px;
+        }
+      }
+    }
+
+    &-descripion {
+      padding-left: 7.3%;
+      opacity: 1;
+      padding-top: 1%;
+      letter-spacing: 0em;
+    }
+
+    & p {
+      display: inline-block;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.03em;
+      color: #ffffff;
+      width: 60%;
+    }
+  }
+
+  .gym-products-section:hover {
+    .gym-products-text {
+      justify-content: center;
+
+      .products-name h2 {
+        padding-bottom: 9px;
+        top: 0;
+
+        &::after {
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .gym-products {
+    height: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    margin-top: 0;
+  }
+
+  .main-index .gym-products-section {
+    height: 220px;
+    margin-left: 0;
+  }
+
+  .main-index .products {
+    &-name {
+      padding-top: 0;
+    }
+
+    &-descripion {
+      font-size: 13px;
+      line-height: 13px;
+    }
+  }
+}

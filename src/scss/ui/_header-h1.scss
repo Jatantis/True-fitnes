@@ -1,0 +1,24 @@
+.header-h1 {
+  width: 100%;
+  font-weight: 900;
+  font-size: 80px;
+  line-height: 98px;
+  text-transform: uppercase;
+  color: #222222;
+  padding-top: 45px;
+}
+
+@media (max-width: 1023px) {
+  .header-h1 {
+    font-size: 50px;
+    line-height: 61px;
+    padding-left: 25px;
+    padding-top: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-h1 {
+    display: none;
+  }
+}

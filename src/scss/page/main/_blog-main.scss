@@ -1,0 +1,150 @@
+.main-blog-main {
+  @include defaultFlex();
+  justify-content: space-between;
+  margin-top: 6%;
+
+  .main-blog-main-button {
+    width: 100%;
+
+    &-send {
+      position: relative;
+      bottom: 12px;
+      width: 100%;
+      line-height: 25px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      height: 50px;
+      background-color: #2ebfb1;
+      border: none;
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 19px;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &-sections {
+    width: 31%;
+    padding-bottom: 3.4%;
+
+    &-description {
+      padding-top: 6%;
+
+      &-h2 {
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: #222222;
+      }
+      &-p {
+        padding-top: 4%;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 0.03em;
+        color: #444444;
+      }
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .main-blog-main {
+    @include defaultFlex();
+    justify-content: space-between;
+    margin-top: 3%;
+
+    .main-blog-main-button {
+      width: 100%;
+
+      &-send {
+        bottom: 0px;
+        top: 4px;
+        height: 44px;
+        font-size: 14px;
+      }
+    }
+
+    &-sections {
+      width: 49.4%;
+      padding-bottom: 3.4%;
+      padding-left: 0.4%;
+
+      &-description {
+        padding-top: 3%;
+
+        &-h2 {
+          font-size: 18px;
+          line-height: 22px;
+          letter-spacing: -0.016em;
+        }
+        &-p {
+          padding-top: 2%;
+          font-size: 16px;
+          line-height: 25px;
+          letter-spacing: 0.03em;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .main-blog-main {
+    @include defaultFlex();
+    justify-content: space-between;
+    margin-top: 3%;
+
+    .main-blog-main-button {
+      width: 100%;
+
+      &-send {
+        bottom: 0px;
+        top: 4px;
+        height: 44px;
+        font-size: 14px;
+      }
+    }
+
+    &-sections {
+      width: 100%;
+      padding-bottom: 3.4%;
+      padding-top: 8.2%;
+      padding-left: 3.5%;
+
+      &-description {
+        padding-top: 7%;
+
+        &-h2 {
+          font-size: 12px;
+          line-height: 15px;
+          letter-spacing: -0.016em;
+        }
+        &-p {
+          padding-top: 3%;
+          font-size: 12px;
+          line-height: 20px;
+          letter-spacing: 0.03em;
+        }
+      }
+
+      &-img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        &-logo {
+          object-fit: cover;
+          padding-left: 0;
+          height: 245px;
+        }
+      }
+    }
+  }
+}

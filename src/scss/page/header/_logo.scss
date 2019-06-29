@@ -1,0 +1,15 @@
+.block-header-logo {
+  width: 15%;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .block-header-logo {
+    width: 100%;
+    @include defaultFlex();
+    justify-content: flex-start;
+    &-svg {
+      height: 68%;
+    }
+  }
+}

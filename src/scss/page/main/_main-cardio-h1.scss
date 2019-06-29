@@ -1,0 +1,70 @@
+.description-cardio {
+  max-width: 1720px;
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+
+  & h1 {
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 98px;
+    text-transform: uppercase;
+    color: #222222;
+  }
+
+  & p {
+    margin-top: 19px;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+    color: #444;
+  }
+}
+
+@media (max-width: 1023px) {
+  .description-cardio {
+    margin-top: 7px;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-bottom: 33px;
+
+    & h1 {
+      font-weight: 900;
+      font-size: 50px;
+      line-height: 98px;
+      text-transform: uppercase;
+      color: #222222;
+    }
+
+    & p {
+      margin-top: 0;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
+      color: #444;
+      letter-spacing: 0.03em;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .main-padding-bottom1-3 .description-cardio {
+    margin-bottom: 1px;
+
+    & h1 {
+      height: 25px;
+      font-size: 20px;
+      line-height: 48px;
+    }
+
+    & p {
+      margin-top: 21px;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 0.03em;
+    }
+  }
+}

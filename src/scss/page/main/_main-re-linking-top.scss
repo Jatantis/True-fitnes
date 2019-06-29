@@ -1,0 +1,318 @@
+.re-linking-four-sections {
+  margin-top: 20px;
+  max-width: 1720px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 227px;
+  height: auto;
+
+  .re-linking-two-sections {
+    margin-top: 0.6%;
+    max-width: 1720px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 352px;
+  }
+
+  .re-linking-four {
+    width: 25%;
+    height: 352px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-start;
+
+    .re-linking {
+      position: relative;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 25px;
+      line-height: 30px;
+      text-transform: uppercase;
+      color: #fff;
+      bottom: 11.7%;
+      padding-bottom: 11px;
+      left: 14%;
+      letter-spacing: 0.01em;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background: #2ebfb1;
+        transition: 0.2s linear;
+      }
+    }
+  }
+  .sections-run-up {
+    background-image: url("/assets/img/cardio/re-link/run.png");
+    background-repeat: no-repeat;
+    width: 24.5%;
+    background-size: cover;
+  }
+  .sections-run {
+    background-image: url("/assets/img/cardio/re-link/run.png");
+    background-repeat: no-repeat;
+    width: 24.5%;
+    background-size: cover;
+  }
+
+  .sections-ellipse {
+    background-image: url("/assets/img/cardio/re-link/ellipse.png");
+    background-repeat: no-repeat;
+    width: 24.5%;
+    background-size: cover;
+  }
+
+  .sections-bikes {
+    background-image: url("/assets/img/cardio/re-link/bike.png");
+    background-repeat: no-repeat;
+    width: 24.5%;
+    background-size: cover;
+  }
+
+  .sections-steppers {
+    background-image: url("/assets/img/cardio/re-link/stepper.png");
+    background-repeat: no-repeat;
+    width: 24.5%;
+    background-size: cover;
+  }
+  //
+  .sections-nabor {
+    background-image: url("/assets/img/power/re-link/nabor.png");
+    background-repeat: no-repeat;
+    width: 24.5%;
+    background-size: cover;
+  }
+
+  .sections-functional {
+    background-image: url("/assets/img/power/re-link/functional.png");
+    background-repeat: no-repeat;
+    width: 24.5%;
+    background-size: cover;
+  }
+
+  .sections-kompozit {
+    background-image: url("/assets/img/power/re-link/kompozit.png");
+    background-repeat: no-repeat;
+    width: 24.5%;
+    background-size: cover;
+  }
+
+  .sections-plastino {
+    background-image: url("/assets/img/power/re-link/plastino.png");
+    background-repeat: no-repeat;
+    width: 24.5%;
+    background-size: cover;
+  }
+
+  .sections-multi {
+    background-image: url("/assets/img/power/re-link/multi.png");
+    background-repeat: no-repeat;
+    width: 24.5%;
+    background-size: cover;
+    margin-right: 0.7%;
+  }
+
+  .sections-group-traning {
+    background-image: url("/assets/img/power/re-link/group-traning.png");
+    background-repeat: no-repeat;
+    width: 24.5%;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 1440px) {
+ 
+  .re-linking-four-sections .re-linking-four .re-linking {
+    left: 5%;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .margin-top-breadcrumbs {
+    margin-top: 2%;
+  }
+
+  .re-linking-four-sections {
+    padding-left: 3.4%;
+    padding-right: 3.4%;
+    margin-top: 0px;
+    height: auto;
+    max-height: 868px;
+    width: 100%;
+    align-content: space-between;
+
+    .re-linking-two-sections {
+      justify-content: space-between;
+      margin-top: 0;
+      height: 280px;
+    }
+
+    .re-linking-four {
+      .re-linking {
+        font-size: 20px;
+        bottom: 21.5%;
+        padding-bottom: 0px;
+        left: 15%;
+        &::after {
+          height: 2px;
+        }
+      }
+    }
+    .sections {
+      &-run {
+        height: 280px;
+        width: 49%;
+        margin-bottom: 2%;
+      }
+
+      &-ellipse {
+        height: 280px;
+        width: 49%;
+        margin-bottom: 2%;
+      }
+
+      &-bikes {
+        height: 280px;
+        width: 49%;
+        margin-bottom: 2%;
+      }
+
+      &-steppers {
+        height: 280px;
+        width: 49%;
+        margin-bottom: 2%;
+      }
+
+      &-nabor {
+        height: 280px;
+        width: 49%;
+        margin-bottom: 2%;
+      }
+
+      &-functional {
+        height: 280px;
+        width: 49%;
+        margin-bottom: 2%;
+      }
+
+      &-kompozit {
+        height: 280px;
+        width: 49%;
+        margin-bottom: 2%;
+      }
+
+      &-plastino {
+        height: 280px;
+        width: 49%;
+        margin-bottom: 2%;
+      }
+
+      &-multi {
+        height: 280px;
+        width: 49%;
+        margin-bottom: 2%;
+      }
+
+      &-group-traning {
+        height: 280px;
+        width: 49%;
+        margin-bottom: 2%;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .re-linking-four-sections {
+    margin-top: 4px;
+    height: auto;
+    max-height: 337px;
+
+    .re-linking-four .re-linking {
+      font-size: 9px !important;
+      font-weight: 900;
+      line-height: 11px;
+      padding-bottom: 5px;
+      left: 10%;
+      bottom: 12px;
+    }
+
+    .sections-run-up {
+      height: 110px;
+      width: 49%;
+      margin-bottom: 2%;
+    }
+    .sections-run {
+      height: 110px;
+      width: 49%;
+      margin-bottom: 2%;
+    }
+
+    .sections-ellipse {
+      height: 110px;
+      width: 49%;
+      margin-bottom: 2%;
+    }
+
+    .sections-bikes {
+      height: 110px;
+      width: 49%;
+      margin-bottom: 2%;
+    }
+
+    .sections-steppers {
+      height: 110px;
+      width: 49%;
+      margin-bottom: 2%;
+    }
+    //
+    .sections-nabor {
+      height: 110px;
+      width: 49%;
+      margin-bottom: 2%;
+    }
+
+    .sections-functional {
+      height: 110px;
+      width: 49%;
+      margin-bottom: 2%;
+    }
+
+    .sections-kompozit {
+      height: 110px;
+      width: 49%;
+      margin-bottom: 2%;
+    }
+
+    .sections-plastino {
+      height: 110px;
+      width: 49%;
+      margin-bottom: 2%;
+    }
+
+    .sections-multi {
+      height: 110px;
+      width: 49%;
+      margin-bottom: 2%;
+    }
+
+    .sections-group-traning {
+      height: 110px;
+      width: 49%;
+      margin-bottom: 2%;
+    }
+  }
+}

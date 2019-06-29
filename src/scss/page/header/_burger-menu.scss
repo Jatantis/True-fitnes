@@ -1,0 +1,21 @@
+.block-header-burger-menu {
+  width: 40px;
+  height: 100%;
+  @include defaultFlex();
+  align-content: flex-end;
+  font-style: normal;
+  padding-bottom: 7px;
+}
+
+@media (max-width: 767px) {
+  .block-header-burger-menu {
+    width: 30px;
+    align-content: flex-start;
+  }
+}
+@media (max-width: 767px) {
+  .block-header-burger-menu {
+    width: 30px;
+    align-content: flex-start;
+  }
+}

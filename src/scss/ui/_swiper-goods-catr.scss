@@ -1,0 +1,33 @@
+.goods-swiper-container-h3 {
+  padding-top: 112px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.goods-swiper-container {
+  @include defaultContainer();
+  @include defaultFlex();
+  margin-bottom: 100px;
+}
+
+.goods-swiper-container .swiper-slide .img-description {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #313131;
+}
+
+.goods-swiper-container .swiper-slide {
+  @include defaultFlexСolumn();
+}
+
+@media (max-width: 1750px) {
+  @include default-padding();
+}

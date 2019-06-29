@@ -1,0 +1,39 @@
+// accordion start
+
+  .accordionItem {
+    float: left;
+    display: block;
+  
+    box-sizing: border-box;
+  }
+  .accordionItemHeading {
+    cursor: pointer;
+    margin: 0px 0px 10px 0px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .close .accordionItemContent {
+    height: 0px;
+    transition: height 1s ease-out;
+    transform: scaleY(0);
+    float: left;
+    display: block;
+  }
+  .open .accordionItemContent {
+    padding: 20px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+    display: block;
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform 0.4s ease;
+    box-sizing: border-box;
+  }
+
+  .open .accordionItemHeading {
+    margin: 0px;
+  }
+  // accordion end

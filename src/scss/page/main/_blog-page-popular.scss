@@ -1,0 +1,230 @@
+.main-blog-page-popular {
+  @include defaultFlexСolumn();
+  width: 27%;
+  padding-left: 1%;
+
+  &-header {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #222222;
+  }
+
+  .button-subscribe {
+    padding-top: 15%;
+    width: 100%;
+
+    &-button {
+      width: 100%;
+      background-color: #2ebfb1;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 25px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #ffffff;
+      padding-top: 4%;
+      padding-bottom: 4%;
+    }
+  }
+
+  &-news {
+    position: relative;
+    padding-bottom: 7%;
+    padding-top: 5%;
+
+    .padding-top-h3 {
+      padding-top: 8%;
+    }
+
+    &-h3 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 27px;
+      text-transform: uppercase;
+      color: #222222;
+      padding-bottom: 5%;
+    }
+    &-p {
+      float: right;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 25px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #515151;
+      position: relative;
+      padding-bottom: 2%;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 4px;
+        z-index: -1;
+        background: #2ebfb1;
+        transition: 0.2s linear;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+      z-index: -1;
+      background: #aaaaaa;
+      transition: 0.2s linear;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .main-blog-page-popular {
+    padding-top: 5%;
+    @include defaultFlex();
+    justify-content: space-between;
+    width: 100%;
+    &-header {
+      width: 100%;
+      font-size: 16px;
+      line-height: 25px;
+    }
+
+    .button-subscribe {
+      @include defaultFlex();
+      justify-content: center;
+      padding-top: 8%;
+      &-button {
+        width: 39%;
+        font-size: 14px;
+        line-height: 25px;
+        padding-top: 2%;
+        padding-bottom: 2%;
+      }
+    }
+    .none-top-h3 {
+      display: none;
+    }
+    &-news {
+      padding-top: 4%;
+      width: 46%;
+      padding-bottom: 1%;
+
+      .padding-top-h3 {
+        padding-top: 0%;
+      }
+
+      &-h3 {
+        font-size: 14px;
+        line-height: 17px;
+        padding-bottom: 2%;
+        font-weight: 500;
+      }
+      &-p {
+        font-size: 14px;
+        line-height: 25px;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 4px;
+          z-index: -1;
+          background: #2ebfb1;
+          transition: 0.2s linear;
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 1px;
+        z-index: -1;
+        background: #aaaaaa;
+        transition: 0.2s linear;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .main-blog-page-popular {
+    padding-top: 9px;
+    @include defaultFlex();
+    justify-content: space-between;
+    width: 100%;
+    &-header {
+      font-size: 12px;
+      line-height: 25px;
+      padding-bottom: 32px;
+    }
+
+    .button-subscribe {
+      @include defaultFlex();
+      justify-content: center;
+      padding-top: 8%;
+      &-button {
+        width: 100%;
+        font-size: 12px;
+        line-height: 15px;
+        padding-top: 5%;
+        padding-bottom: 5%;
+      }
+    }
+    .none-top-h3 {
+      display: none;
+    }
+    &-news {
+      padding-top: 29px;
+      width: 100%;
+      padding-bottom .padding-top-h3 {
+        padding-top: 0%;
+      }
+
+      &-h3 {
+        font-size: 12px;
+        line-height: 15px;
+        padding-bottom: 17px;
+      }
+      &-p {
+        font-size: 12px;
+        line-height: 25px;
+        bottom: 8px;
+        padding-bottom: 1%;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 4px;
+          z-index: -1;
+          background: #2ebfb1;
+          transition: 0.2s linear;
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 1px;
+        z-index: -1;
+        background: #aaaaaa;
+        transition: 0.2s linear;
+      }
+    }
+  }
+}
