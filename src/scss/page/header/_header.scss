@@ -7,6 +7,9 @@
   height: 80px;
   margin-bottom: 34px;
   padding-top: 26px;
+  &-menu-a{
+    cursor: pointer;
+  }
 }
 .block-header-space-left {
   @include defaultFlex();

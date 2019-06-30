@@ -12,7 +12,8 @@
     margin-left: 5px;
   }
   &-a {
-    width: 20%;
+    position: relative;
+    display: inline;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -27,6 +28,24 @@
         transform: rotate(180deg);
       }
       opacity: 0.5;
+    }
+
+    &:after {
+      transition: 0.2s linear;
+      content: "";
+      opacity: 0;
+      position: absolute;
+      top: 40px;
+      right: 0;
+      width: 100%;
+      height: 4px;
+      z-index: 0;
+      background: #2ebfb1;
+    }
+    &:hover:after,
+    &:focus:after {
+      top: 30px;
+      opacity: 1;
     }
   }
 }

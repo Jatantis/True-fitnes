@@ -1,10 +1,26 @@
 .block-header-burger-menu {
+  cursor: pointer;
   width: 40px;
   height: 100%;
   @include defaultFlex();
   align-content: flex-end;
   font-style: normal;
   padding-bottom: 7px;
+}
+.burger-menu-close {
+  transition: 0.2s linear;
+  opacity: 1;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.burger-svg {
+  transition: 0.2s linear;
+  opacity: 1;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 @media (max-width: 767px) {

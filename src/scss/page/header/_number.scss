@@ -3,10 +3,21 @@
 }
 
 .block-header-number {
+  cursor: pointer;
   height: 100%;
-  @include defaultFlex();
+
+  padding-bottom: 4px;
+  padding-right: 8%;
+  width: 80%;
+  min-width: 153px;
+}
+.block-header-number-a {
+  display: flex;
   justify-content: flex-end;
   align-content: flex-end;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -14,10 +25,6 @@
   letter-spacing: 0.03em;
   color: #353535;
   opacity: 0.8;
-  padding-bottom: 4px;
-  padding-right: 8%;
-  width: 80%;
-  min-width: 153px;
 }
 
 @media (max-width: 1250px) {
@@ -35,9 +42,7 @@
 @media (max-width: 450px) {
   .block-header-number-svg {
     margin-right: 25%;
-
   }
-
 }
 
 @media (max-width: 767px) {

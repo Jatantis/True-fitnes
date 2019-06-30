@@ -443,3 +443,54 @@ if (document.querySelector('.cart-elp') !== null) {
         cartRun.style.display = 'none';
     }
 }
+
+
+// modal index page
+
+const burgerModalOpen = document.querySelector('.burger-modal-open');
+const burgerModalClose = document.querySelector('.burger-modal-close');
+
+const backgroundFon = document.querySelector('.burger-modal');
+const modalNav = document.querySelector('.modal-content');
+
+burgerModalClose.addEventListener("click", closeModal);
+burgerModalOpen.addEventListener("click", openModal);
+
+function closeModal() {
+    backgroundFon.style.opacity = '0';
+    backgroundFon.style.zIndex = '-1';
+    modalNav.style.transform = "translateX(50px)";
+}
+
+function openModal() {
+    backgroundFon.style.opacity = '1';
+    backgroundFon.style.zIndex = '1';
+    modalNav.style.transform = "translateX(0px)";
+}
+
+//header arrow menu
+
+const arrowButtonPower = document.querySelector('.header-arrow-menu-power');
+const arrowButton = document.querySelector('.header-arrow-menu');
+const arrowMenu = document.querySelector('.header-arrow-menu-nav');
+
+arrowButtonPower.addEventListener("click", showArrowMenu);
+arrowButton.addEventListener("click", showArrowMenu);
+let a = true;
+function showArrowMenu() {
+    if (a) {
+        arrowMenu.style.opacity = '1';
+        arrowMenu.style.zIndex = '1';
+        a = false;
+    } else {
+        arrowMenu.style.opacity = '0';
+        arrowMenu.style.zIndex = '-1';
+        a = true;
+    }
+
+
+}
+
+
+
+

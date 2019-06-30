@@ -26,6 +26,9 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    &-a{
+      width: 47%;
+    }
   }
 
   .title-blog {
@@ -42,7 +45,7 @@
     padding: 71px;
     padding-top: 76px;
     padding-bottom: 38px;
-    width: 47%;
+    width: 100%;
     background-color: #fff;
     height: 407px;
 
