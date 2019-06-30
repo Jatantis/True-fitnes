@@ -9,6 +9,9 @@
     width: 100%;
   }
 }
+.searche-five-cart {
+  @include sliderZindexForArrow();
+}
 
 .my-slider {
   &-first-lvl {
@@ -46,6 +49,11 @@
 #customize-controls {
   @include defaultFlex();
   @include sliderCustomizeControls();
+
+  &-searce {
+    @include defaultFlex();
+    @include sliderCustomizeControls();
+  }
 
   &2 {
     @include defaultFlex();

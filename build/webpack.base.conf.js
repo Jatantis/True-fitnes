@@ -212,6 +212,12 @@ module.exports = {
             filename: './contact.html'
         }),
 
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/search.html`,
+            filename: './search.html'
+        }),
+
         new CopyWebpackPlugin([
             {from: `${PATHS.src}/img`, to: `${PATHS.assets}img`},
             {from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts`},

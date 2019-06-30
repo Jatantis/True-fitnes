@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css">
 </head>
 
 <body>
@@ -90,30 +90,67 @@
 
     <!--END HEADER-->
     <!-- main -->
-    <main class="contact">
-        <div class="breadcrumbs">
-            <a href="#">главная //</a>
-            <a href="#">кардио //</a>
-            <p>беговые</p>
+    <main class="search-page">
+        <div class="search-line">
+            <p class="search-line-notice">Извините, по вашему запросу: <strong>беговые дорожки</strong> ничего не
+                найдено </p>
+            <div class="search-line-img">
+                <input type="text" class="search-line-input">
+                <svg class="search-line-input-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.4">
+                        <path
+                            d="M21.1721 19.1714L15.8722 13.9732C17.2349 12.4455 17.9815 10.5234 17.9815 8.52244C17.9815 3.84734 13.9482 0.0437012 8.99077 0.0437012C4.03334 0.0437012 0 3.84734 0 8.52244C0 13.1975 4.03334 17.0012 8.99077 17.0012C10.8519 17.0012 12.6254 16.4718 14.1417 15.4669L19.4818 20.7046C19.705 20.9232 20.0052 21.0437 20.327 21.0437C20.6315 21.0437 20.9204 20.9342 21.1396 20.7351C21.6056 20.3123 21.6205 19.6112 21.1721 19.1714ZM8.99077 2.25555C12.6551 2.25555 15.6361 5.0668 15.6361 8.52244C15.6361 11.9781 12.6551 14.7893 8.99077 14.7893C5.32645 14.7893 2.34542 11.9781 2.34542 8.52244C2.34542 5.0668 5.32645 2.25555 8.99077 2.25555Z"
+                            fill="#767E85" />
+                    </g>
+                </svg>
+            </div>
         </div>
-        <h1 class="header-h1">контакты</h1>
-        <div class="contact-info">
-            <div class="contact-info-email">
-                <p class="contact-title">E-mail:</p>
-                <p class="contact-description">info@fitdivision.ru</p>
+        <div class="search-page-slider">
+            <div class="goods-swiper-container">
+                <h3 class="goods-swiper-container-h3">Рекомендуем посмотреть</h3>
+                <div class="my-slider-container">
+                    <div class="searche-five-cart">
+                        <div class="slider-item">
+                            <img src="assets/img/cardio/swiper/ellipse.png" alt="" class="slider-item-img">
+                            <p class="slider-item-p">Элипсоид SPECTRUM</p>
+                        </div>
+                        <div class="slider-item">
+                            <img src="assets/img/cardio/swiper/stepper.png" alt="" class="slider-item-img">
+                            <p class="slider-item-p">PALISADE CLIMBER</p>
+                        </div>
+                        <div class="slider-item">
+                            <img src="assets/img/cardio/swiper/run-up.png" alt="" class="slider-item-img">
+                            <p class="slider-item-p">ALPINE RUNNER</p>
+                        </div>
+                        <div class="slider-item">
+                            <img src="assets/img/cardio/swiper/ellipse.png" alt="" class="slider-item-img">
+                            <p class="slider-item-p">900 ELLIPTICAL</p>
+                        </div>
+                        <div class="slider-item">
+                            <img src="assets/img/cardio/swiper/stepper.png" alt="" class="slider-item-img">
+                            <p class="slider-item-p">PALISADE CLIMBER</p>
+                        </div>
+                        <div class="slider-item">
+                            <img src="assets/img/cardio/swiper/ellipse.png" alt="" class="slider-item-img">
+                            <p class="slider-item-p">Элипсоид SPECTRUM</p>
+                        </div>
+                    </div>
+                    <div id="customize-controls-searce">
+                        <svg width="22" height="68" viewBox="0 0 22 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 33.8086L5.5 33.8086L22 64.9879L16.5391 64.9879L0 33.8086Z" fill="#C6C6C6" />
+                            <path d="M0 33.8286L5.5 33.8286L22 2.64933L16.5392 2.64933L0 33.8286Z" fill="#C6C6C6" />
+                        </svg>
+                        <svg width="22" height="68" viewBox="0 0 22 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 33.8086L16.5 33.8086L1.15577e-06 64.9879L5.46089 64.9879L22 33.8086Z"
+                                fill="#C6C6C6" />
+                            <path d="M22 33.8286L16.5 33.8286L1.08647e-06 2.64933L5.46083 2.64933L22 33.8286Z"
+                                fill="#C6C6C6" />
+                        </svg>
+                    </div>
+                </div>
             </div>
-            <div class="contact-info-number">
-                <p class="contact-title">Телефон:</p>
-                <p class="contact-description">8 (495) 740-51-00</p>
-            </div>
-        </div>
-        <div class="contact-social-link">
-            <div class="contact-social-link-facebook">
-                <img src="assets/img/contact/facebook.png" alt="" class="link-facebook">
-            </div>
-            <div class="contact-social-link-instagram">
-                <img src="assets/img/contact/insta.png" alt="" class="link-instagram">
-            </div>
+
         </div>
     </main>
     <!-- end main -->
@@ -209,7 +246,7 @@
     </div>
     <!--END FOOTER-->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
 </body>
 
 </html>
