@@ -366,6 +366,37 @@ if (document.querySelector('.searche-five-cart') !== null) {
     );
 }
 
+let sliderSearchePage = {
+    container: '.search-page-five-cart',
+    items: 5,
+    touch: true,
+    preventScrollOnTouch: "auto",
+    loop: true,
+    slideBy: "page",
+    mouseDrag: true,
+    swipeAngle: false,
+    speed: 400,
+    controlsContainer: "#customize-controls-search-page",
+    responsive: {
+        0: {
+            items: 2,
+        },
+
+        768: {
+            items: 3,
+        },
+        1024: {
+            items: 5,
+        },
+    },
+}
+
+if (document.querySelector('.search-page-five-cart') !== null) {
+    var slider = tns(
+        sliderSearchePage
+    );
+}
+
 let sliderСarusel = {
     container: '.my-slider-carusel',
     items: 3,
@@ -388,6 +419,7 @@ if (document.querySelector('.my-slider-carusel') !== null) {
         sliderСarusel
     );
 }
+
 if (document.querySelector('.cart-elp') !== null) {
     // tabs in pages comparison
     let buttonRun = document.querySelector('.button-run');

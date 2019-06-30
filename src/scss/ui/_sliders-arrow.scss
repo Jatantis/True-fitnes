@@ -12,6 +12,9 @@
 .searche-five-cart {
   @include sliderZindexForArrow();
 }
+.search-page-five-cart {
+  @include sliderZindexForArrow();
+}
 
 .my-slider {
   &-first-lvl {
@@ -49,6 +52,11 @@
 #customize-controls {
   @include defaultFlex();
   @include sliderCustomizeControls();
+  
+  &-search-page {
+    @include defaultFlex();
+    @include sliderCustomizeControls();
+  }
 
   &-searce {
     @include defaultFlex();

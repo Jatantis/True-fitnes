@@ -1,0 +1,19 @@
+.search-page-h1 {
+  padding-top: 4%;
+  margin-bottom: 5%;
+}
+.search-page {
+  padding-top: 0;
+}
+
+.goods-catalog-second {
+  padding-top: 0;
+}
+
+@media (max-width: 1023px) {
+  .search-page .goods-catalog-second .goods-cart {
+    width: 96%;
+    height: auto;
+    margin-bottom: 36px;
+  }
+}

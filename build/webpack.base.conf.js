@@ -218,6 +218,12 @@ module.exports = {
             filename: './search.html'
         }),
 
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/search-page.html`,
+            filename: './search-page.html'
+        }),
+
         new CopyWebpackPlugin([
             {from: `${PATHS.src}/img`, to: `${PATHS.assets}img`},
             {from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts`},
