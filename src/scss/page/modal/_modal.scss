@@ -1,42 +1,63 @@
+#scrollbar-modal::-webkit-scrollbar {
+  width: 4px;
+  background-color: #f5f5f5;
+}
+#scrollbar-modal::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  background-color: rgba(85, 85, 85, 0.2);
+}
+
 .modal {
   display: flex;
-  flex-wrap: wrap;
   justify-content: flex-end;
-  align-content: flex-start;
-  position: fixed;
+  position: absolute;
   z-index: -1;
   opacity: 0;
-  left: 0;
+  right: 0;
   top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   transition: 0.3s linear;
 
+  .sum-menu-cardio {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    transform: translateY(-20px);
+  }
+
+  .sum-menu-power {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    transform: translateY(-20px);
+  }
+
   &-content {
+    position: absolute;
     display: flex;
-    flex-wrap: wrap;
     justify-content: flex-start;
     flex-direction: column;
-    // align-content: flex-end;
     align-items: flex-start;
-    z-index: 1;
     width: 606px;
     height: 100%;
     background-color: #fff;
     padding-left: 6.5%;
     padding-right: 5%;
     transition: 0.3s linear;
-    transform: translateX(50px);
+    transform: translateX(150px);
+    overflow-y: auto;
 
     .posotoin-button-close {
       display: flex;
-      flex-wrap: wrap;
       justify-content: flex-end;
       align-content: flex-end;
       width: 100%;
       height: 78px;
       margin-bottom: 11%;
+      margin-top: 40px;
 
       .button-close {
         cursor: pointer;
@@ -72,44 +93,175 @@
 
     .modal-nav {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      flex-direction: column;
-      align-content: flex-start;
-      margin-top: 34.5%;
-      height: 65%;
       width: 100%;
+      flex-direction: column;
 
-      div {
-        padding-bottom: 20.4%;
-        position: relative;
-        &:after {
-          transition: 0.2s linear;
-          content: "";
-          opacity: 0;
-          position: absolute;
-          top: 60px;
-          right: 0;
-          width: 100%;
-          height: 4px;
-          z-index: 0;
-          background: #2ebfb1;
+      &-no-desctop-menu {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        padding-bottom: 40px;
+        border-bottom: 2px solid #e6e8ed;
+        &-a {
+          cursor: pointer;
+          width: 83%;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 25px;
+          letter-spacing: 0.03em;
+          text-transform: uppercase;
+          color: #000000;
+          padding-top: 40px;
+          position: relative;
         }
-        &:hover:after,
-        &:focus:after {
-          top: 50px;
-          opacity: 1;
+        &-svg {
+          position: absolute;
+          top: 45px;
+          right: 0;
+        }
+        &-svg-power {
+          position: absolute;
+          top: 45px;
+          right: 0;
+        }
+        &-sub-menu {
+          width: 65%;
+          display: flex;
+          flex-direction: column;
+          &-a {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 25px;
+            letter-spacing: 0.03em;
+            color: #000000;
+            padding-top: 30px;
+            padding-left: 40px;
+          }
         }
       }
 
-      div a {
-        font-weight: bold;
-        font-size: 25px;
-        line-height: 30px;
-        text-transform: uppercase;
-        color: #222222;
-        position: relative;
+      &-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        &-a {
+          font-weight: bold;
+          font-size: 25px;
+          line-height: 30px;
+          text-transform: uppercase;
+          color: #222222;
+          padding-top: 40px;
+          position: relative;
+          display: inline-block;
+          width: -moz-max-content;
+          width: -webkit-max-content;
+          width: -o-max-content;
+          &:after {
+            transition: 0.2s linear;
+            content: "";
+            opacity: 0;
+            position: absolute;
+            top: 85px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            z-index: 0;
+            background: #2ebfb1;
+          }
+          &:hover:after,
+          &:focus:after {
+            top: 75px;
+            opacity: 1;
+          }
+        }
       }
     }
+  }
+}
+
+@media (max-width: 1550px) {
+  .modal-content {
+    width: 500px;
+    padding-left: 5.5%;
+    padding-right: 1%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .modal .modal-content {
+    width: 437px;
+    padding-left: 5.5%;
+    padding-right: 5.5%;
+    .modal-nav {
+      &-no-desctop-menu {
+        display: flex;
+      }
+      &-menu {
+        &-a {
+          font-size: 14px;
+          line-height: 25px;
+          &:after {
+            display: none;
+          }
+          &:hover:after,
+          &:focus:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .modal .modal-content {
+    width: 320px;
+    padding-left: 5.5%;
+    padding-right: 5.5%;
+
+    .modal-search {
+      width: 100%;
+    }
+    .modal-nav {
+      &-no-desctop-menu {
+        &-a {
+          font-size: 12px;
+          line-height: 17px;
+          padding-top: 30px;
+          width: 100%;
+        }
+        &-sub-menu {
+          &-a {
+            font-size: 11px;
+            line-height: 15px;
+            padding-top: 20px;
+            padding-left: 30px;
+          }
+        }
+      }
+
+      &-menu {
+        &-a {
+          font-size: 12px;
+          line-height: 17px;
+          &:after {
+            display: none;
+          }
+          &:hover:after,
+          &:focus:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .modal-content .modal-nav-no-desctop-menu-svg {
+    top: 33px;
+    height: 7px;
+  }
+  .modal-content .modal-nav-no-desctop-menu-svg-power {
+    top: 33px;
+    height: 7px;
   }
 }

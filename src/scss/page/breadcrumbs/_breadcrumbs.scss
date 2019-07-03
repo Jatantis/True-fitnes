@@ -29,15 +29,12 @@
     }
   }
 
-  .main-padding-bottom1-3 .breadcrumbs{
-    padding-left: 3%;
-  }
 }
 
 @media (max-width: 767px) {
   .breadcrumbs {
     margin-top: 7px;
-    padding-left: 3.5%;
+    padding-left: 0;
 
     a,
     p {

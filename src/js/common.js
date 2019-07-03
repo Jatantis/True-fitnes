@@ -420,36 +420,84 @@ if (document.querySelector('.my-slider-carusel') !== null) {
     );
 }
 
+
+// comparison isActive
+
 if (document.querySelector('.cart-elp') !== null) {
     // tabs in pages comparison
     let buttonRun = document.querySelector('.button-run');
-    let cartRun = document.querySelector('.cart-run');
-
     let buttonElp = document.querySelector('.button-elp');
-    let cartElp = document.querySelector('.cart-elp');
+    let buttonBike = document.querySelector('.button-bike');
+    let buttonStep = document.querySelector('.button-step');
 
+
+    let cartElp = document.querySelector('.cart-elp');
+    let cartRun = document.querySelector('.cart-run');
+    let cartBike = document.querySelector('.cart-bike');
+    let cartStep = document.querySelector('.cart-step');
+
+    buttonRun.classList.toggle('isActive');
     cartElp.style.display = 'none';
+    cartBike.style.display = 'none';
+    cartStep.style.display = 'none';
 
     buttonRun.addEventListener("click", showCartRun);
     buttonElp.addEventListener("click", showCartElp);
+    buttonBike.addEventListener("click", showCartBike);
+    buttonStep.addEventListener("click", showCartStep);
 
     function showCartRun() {
         cartElp.style.display = 'none';
+        cartBike.style.display = 'none';
+        cartStep.style.display = 'none';
         cartRun.style.display = 'flex';
+        buttonRun.classList.toggle('isActive');
+        buttonElp.classList.remove('isActive');
+        buttonBike.classList.remove('isActive');
+        buttonStep.classList.remove('isActive');
     }
 
     function showCartElp() {
         cartElp.style.display = 'flex';
+        cartBike.style.display = 'none';
+        cartStep.style.display = 'none';
         cartRun.style.display = 'none';
+        buttonRun.classList.remove('isActive');
+        buttonElp.classList.toggle('isActive');
+        buttonBike.classList.remove('isActive');
+        buttonStep.classList.remove('isActive');
+    }
+    function showCartBike() {
+        cartElp.style.display = 'none';
+        cartBike.style.display = 'flex';
+        cartStep.style.display = 'none';
+        cartRun.style.display = 'none';
+        buttonRun.classList.remove('isActive');
+        buttonElp.classList.remove('isActive');
+        buttonBike.classList.toggle('isActive');
+        buttonStep.classList.remove('isActive');
+    }
+
+    function showCartStep() {
+        cartElp.style.display = 'none';
+        cartBike.style.display = 'none';
+        cartStep.style.display = 'flex';
+        cartRun.style.display = 'none';
+        buttonRun.classList.remove('isActive');
+        buttonElp.classList.remove('isActive');
+        buttonBike.classList.remove('isActive');
+        buttonStep.classList.toggle('isActive');
     }
 }
 
 
-// modal index page
+
+// modal header
 
 const burgerModalOpen = document.querySelector('.burger-modal-open');
 const burgerModalClose = document.querySelector('.burger-modal-close');
 
+// position: fixed;
 const backgroundFon = document.querySelector('.burger-modal');
 const modalNav = document.querySelector('.modal-content');
 
@@ -460,13 +508,85 @@ function closeModal() {
     backgroundFon.style.opacity = '0';
     backgroundFon.style.zIndex = '-1';
     modalNav.style.transform = "translateX(50px)";
+    modalNav.style.position = "absolute";
+    backgroundFon.style.position = "absolute";
 }
 
 function openModal() {
     backgroundFon.style.opacity = '1';
     backgroundFon.style.zIndex = '1';
     modalNav.style.transform = "translateX(0px)";
+    modalNav.style.position = "fixed";
+    backgroundFon.style.position = "fixed";
 }
+
+
+// modal header sub menu
+const menuCardioButton = document.querySelector('.no-desctop-cardio');
+const menuPowerButton = document.querySelector('.no-desctop-power');
+
+const menuCardio = document.querySelector('.sum-menu-cardio');
+const menuPower = document.querySelector('.sum-menu-power');
+
+const arrowCardio = document.querySelector('.modal-nav-no-desctop-menu-svg');
+const arrowPower = document.querySelector('.modal-nav-no-desctop-menu-svg-power');
+
+menuCardioButton.addEventListener("click", showSubMenu);
+function showSubMenu() {
+    if (a) {
+        menuCardio.style.opacity = '1';
+        menuCardio.style.position = 'static';
+        menuCardio.style.zIndex = '1';
+        menuCardio.style.transform = "translateY(0px)";
+        menuCardio.style.transition = "0.2s linear";
+        a = false;
+        if (b == false) {
+            menuPower.style.opacity = '0';
+            menuPower.style.position = 'absolute';
+            menuPower.style.zIndex = '-1';
+            menuPower.style.transform = "translateY(-20px)";
+            menuPower.style.transition = "0s linear";
+            b = true;
+        }
+    } else {
+        menuCardio.style.opacity = '0';
+        menuCardio.style.position = 'absolute';
+        menuCardio.style.zIndex = '-1';
+        menuCardio.style.transform = "translateY(-20px)";
+        menuCardio.style.transition = "0s linear";
+        a = true;
+    }
+}
+
+menuPowerButton.addEventListener("click", showSubMenuPower);
+function showSubMenuPower() {
+    if (b) {
+        menuPower.style.opacity = '1';
+        menuPower.style.position = 'static';
+        menuPower.style.zIndex = '1';
+        menuPower.style.transform = "translateY(0px)";
+        menuPower.style.transition = "0.2s linear";
+        b = false;
+        if (a == false) {
+            menuCardio.style.opacity = '0';
+            menuCardio.style.position = 'absolute';
+            menuCardio.style.zIndex = '-1';
+            menuCardio.style.transform = "translateY(-20px)";
+            menuCardio.style.transition = "0s linear";
+            a = true;
+        }
+    } else {
+        menuPower.style.opacity = '0';
+        menuPower.style.position = 'absolute';
+        menuPower.style.zIndex = '-1';
+        menuPower.style.transform = "translateY(-20px)";
+        menuPower.style.transition = "0s linear";
+        b = true;
+    }
+}
+
+
+
 
 //header arrow menu
 
@@ -474,9 +594,10 @@ const arrowButtonPower = document.querySelector('.header-arrow-menu-power');
 const arrowButton = document.querySelector('.header-arrow-menu');
 const arrowMenu = document.querySelector('.header-arrow-menu-nav');
 
-arrowButtonPower.addEventListener("click", showArrowMenu);
-arrowButton.addEventListener("click", showArrowMenu);
+arrowButtonPower.addEventListener("mouseover", showArrowMenu);
+arrowButton.addEventListener("mouseover", showArrowMenu);
 let a = true;
+let b = true;
 function showArrowMenu() {
     if (a) {
         arrowMenu.style.opacity = '1';
@@ -491,6 +612,15 @@ function showArrowMenu() {
 
 }
 
+// request form footer
 
+const labelFormTel = document.querySelector('.label-tel');
+const labelFormEmail = document.querySelector('.label-email');
+const labelFormCity = document.querySelector('.label-city');
+const labelFormDesc = document.querySelector('.label-desc');
 
+const inputFormTel = document.querySelector('.input-tel');
+const inputFormEmail = document.querySelector('.input-email');
+const inputFormCity = document.querySelector('.input-city');
+const inputFormDesc = document.querySelector('.input-desc');
 

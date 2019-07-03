@@ -27,6 +27,9 @@
       color: #ffffff;
       padding-top: 4%;
       padding-bottom: 4%;
+      &:hover {
+        background-color: #2ebfb0e3;
+      }
     }
   }
 
@@ -49,27 +52,33 @@
       padding-bottom: 5%;
     }
     &-p {
-      float: right;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 18px;
-      line-height: 25px;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      color: #515151;
-      position: relative;
-      padding-bottom: 2%;
-
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 100%;
-        height: 4px;
-        z-index: -1;
-        background: #2ebfb1;
+      .popular-news-a {
+        float: right;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #515151;
+        position: relative;
+        padding-bottom: 2%;
         transition: 0.2s linear;
+        &:hover {
+          color: #515151a9;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 4px;
+          z-index: -1;
+          background: #2ebfb1;
+          transition: 0.2s linear;
+        }
       }
     }
     &::after {
@@ -102,6 +111,7 @@
       @include defaultFlex();
       justify-content: center;
       padding-top: 8%;
+      padding-bottom: 80px;
       &-button {
         width: 39%;
         font-size: 14px;

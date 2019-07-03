@@ -23,7 +23,7 @@
     & h2 {
       width: 60%;
       font-style: normal;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 30px;
       line-height: 37px;
       text-transform: uppercase;
@@ -66,9 +66,6 @@
 
 @media (max-width: 1750px) {
   .main-padding-bottom1-3 {
-    @include default-padding();
-  }
-  .goods-swiper-description {
     @include default-padding();
   }
 }

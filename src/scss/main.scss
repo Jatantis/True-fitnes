@@ -26,9 +26,16 @@ body {
   font-family: "Montserrat", "sans-serif";
   font-weight: normal;
   font-style: normal;
+  overflow-x: hidden;
 }
 
 @media (max-width: 767px) {
+  body {
+    font-family: "Montserrat", "sans-serif";
+    font-weight: normal;
+    font-style: normal;
+  }
+
   h1 {
     font-weight: 900;
     font-size: 20px;

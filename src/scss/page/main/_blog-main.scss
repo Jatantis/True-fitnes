@@ -32,6 +32,10 @@
     width: 31%;
     padding-bottom: 3.4%;
 
+    &-img {
+      z-index: 0;
+      position: relative;
+    }
     &-description {
       padding-top: 6%;
 
@@ -116,7 +120,6 @@
       width: 100%;
       padding-bottom: 3.4%;
       padding-top: 8.2%;
-      padding-left: 3.5%;
 
       &-description {
         padding-top: 7%;

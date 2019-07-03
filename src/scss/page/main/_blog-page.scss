@@ -180,7 +180,6 @@
 
 @media (max-width: 767px) {
   .main-blog-page {
-    padding-left: 8%;
 
     .main-blog-page-main-comment-logo .Artem-Gusev-div {
       width: 60%;
@@ -191,7 +190,7 @@
     }
 
     .blog-page-svg {
-      padding-bottom: 35px;
+      padding-bottom: 15px;
       width: 24px;
     }
 
@@ -232,13 +231,12 @@
 }
 @media (max-width: 500px) {
   .main-blog-page {
-    padding-left: 8%;
 
     .main-blog-page-main-comment-logo .Artem-Gusev-div {
       width: 91%;
     }
     .blog-page-svg {
-      padding-bottom: 35px;
+      padding-bottom: 15px;
       width: 24px;
     }
 
@@ -308,7 +306,6 @@
         }
       }
       &-text {
-        padding-top: 20%;
         &-h2 {
           font-size: 12px;
           line-height: 15px;

@@ -1,4 +1,35 @@
-.compas-description {
+.compas {
+  .header-description {
+    &-h1 {
+      font-weight: 900;
+      font-size: 80px;
+      line-height: 98px;
+      text-transform: uppercase;
+      color: #222222;
+      padding-top: 46px;
+    }
+    &-h2 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 35px;
+      line-height: 43px;
+      text-transform: uppercase;
+      color: #222222;
+      padding-top: 28px;
+    }
+    &-p {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: 0.03em;
+      color: #444444;
+      padding-top: 64px;
+    }
+  }
+}
+
+.compas .compas-description {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -45,15 +76,39 @@
   }
 }
 
+@media (max-width: 1750px) {
+  .compas {
+    @include default-padding();
+  }
+}
+
 @media (max-width: 1023px) {
-  .compas-description {
+  .compas {
+    .header-description {
+      &-h1 {
+        font-size: 50px;
+        line-height: 61px;
+        padding-top: 26px;
+      }
+      &-h2 {
+        font-size: 20px;
+        line-height: 24px;
+        padding-top: 08px;
+      }
+      &-p {
+        font-size: 20px;
+        line-height: 30px;
+        padding-top: 17px;
+      }
+    }
+  }
+  .compas .compas-description {
     flex-direction: column;
     padding-top: 0;
 
     &-block {
       width: 100%;
       height: auto;
-      padding-left: 3.4%;
       padding-top: 0;
 
       &-img {
@@ -83,13 +138,31 @@
   }
 }
 @media (max-width: 767px) {
-  .compas-description {
+  .compas {
+    .header-description {
+      &-h1 {
+        font-size: 20px;
+        line-height: 24px;
+        padding-top: 26px;
+      }
+      &-h2 {
+        font-size: 12px;
+        line-height: 20px;
+        padding-top: 08px;
+      }
+      &-p {
+        font-size: 12px;
+        line-height: 20px;
+        padding-top: 17px;
+      }
+    }
+  }
+  .compas .compas-description {
     flex-direction: column;
 
     &-block {
       width: 100%;
       height: auto;
-      padding-left: 3.4%;
 
       &-img {
         .compas-img {

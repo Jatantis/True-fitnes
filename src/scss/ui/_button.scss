@@ -21,6 +21,29 @@
   // }
 }
 
+// подписаться
+
+.button-subscribe {
+  padding-top: 15%;
+  width: 100%;
+
+  &-button {
+    width: 100%;
+    background-color: #2ebfb1;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    &:hover {
+      background-color: #2ebfb0e3;
+    }
+  }
+}
+
 //show all
 
 .button-show-all {

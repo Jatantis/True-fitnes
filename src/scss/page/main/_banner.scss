@@ -8,42 +8,66 @@
       opacity: 1;
     }
   }
-
+  padding-top: 35px;
   margin-top: 73px;
   @include defaultContainer();
-  @include defaultFlexСolumn();
-  justify-content: center;
+  @include defaultFlex();
+  justify-content: flex-start;
   align-content: flex-start;
   position: relative;
   height: 500px;
-  margin-bottom: 50px;
+  margin-bottom: 85px;
 
   &__img {
-    opacity: 0; 
-    // as we're using the same animation for each instance, call it here so we're not repeating it
-    animation: fadeInUp 2s ease-in-out 0s forwards;
-    animation-delay: 2s;
-    position: absolute;
-    background-image: url("/assets/img/banner/banner-true.png");
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    background-position-x: 100%;
+    &1 {
+      opacity: 0;
+      animation: fadeInUp 1s ease-in-out 0s forwards;
+      animation-delay: 1.3s;
+      position: absolute;
+      background-image: url("/assets/img/banner/banner-true3.png");
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      background-position-x: 100%;
+    }
+    &2 {
+      opacity: 0;
+      animation: fadeInUp 1.5s ease-in-out 0s forwards;
+      animation-delay: 1.6s;
+      position: absolute;
+      background-image: url("/assets/img/banner/banner-true2.png");
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      background-position-x: 100%;
+    }
+    &3 {
+      opacity: 0;
+      animation: fadeInUp 2s ease-in-out 0s forwards;
+      animation-delay: 2s;
+      position: absolute;
+      background-image: url("/assets/img/banner/banner-true1.png");
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      background-position-x: 100%;
+    }
   }
   &__heading {
-    opacity: 0; 
+    opacity: 0;
     // as we're using the same animation for each instance, call it here so we're not repeating it
-    animation: fadeInUp 1s ease-in-out 0s forwards;
+    animation: fadeInUp 0.7s ease-in-out 0s forwards;
     animation-delay: 1s;
     @include defaultFlexСolumn();
     justify-content: center;
     height: 50%;
     width: 100%;
     &-h1 {
-      padding-top: 30px;
-      padding-left: 3%;
-      width: 60%;
+      padding-top: 45px;
+      width: 65%;
       font-style: normal;
       font-weight: 900;
       font-size: 45px;
@@ -57,22 +81,26 @@
     }
   }
   &__advantages {
-    opacity: 0; 
+    opacity: 0;
     // as we're using the same animation for each instance, call it here so we're not repeating it
-    animation: fadeInUp 2s ease-in-out 0s forwards;
-    animation-delay: 3s;
+    animation: fadeInUp 1s ease-in-out 0s forwards;
+    animation-delay: 2.5s;
     height: 250px;
     @include defaultFlex();
-    justify-content: space-around;
+    justify-content: space-between;
     align-content: flex-start;
-    align-items: flex-end;
-    width: 60%;
-    padding-top: 7px;
+    width: 56%;
+    padding-top: 47px;
     &-section {
       @include defaultFlexСolumn();
       padding-top: 0px;
       padding-right: 0;
       margin-left: 0;
+
+      &-img {
+        height: 46px;
+        width: 100%;
+      }
 
       &-p {
         position: relative;
@@ -100,6 +128,21 @@
   }
 }
 
+@media (max-width: 1750px) {
+  body .banner {
+    &__heading {
+      padding-left: 2%;
+      &-h1 {
+        padding-left: 2%;
+      }
+    }
+
+    &__advantages {
+      @include default-padding();
+    }
+  }
+}
+
 @media (max-width: 1550px) {
   .banner {
     justify-content: flex-start;
@@ -110,18 +153,26 @@
       font-size: 14px;
     }
     &__img {
-      background-position-x: 447px;
+      &1 {
+        background-position-x: 447px;
+      }
+      &2 {
+        background-position-x: 447px;
+      }
+      &3 {
+        background-position-x: 447px;
+      }
     }
 
     &__heading {
       &-h1 {
         padding-left: 2%;
-        width: 67%;
+        width: 62%;
       }
     }
 
     &__advantages {
-      width: 72%;
+      width: 57%;
       padding-top: 50px;
     }
   }
@@ -146,17 +197,25 @@
       width: 100%;
       z-index: -1;
       top: 0;
-      background-position-x: 100% !important;
+      background-position-x: 100%;
+      &1 {
+        display: none;
+      }
+      &2 {
+        display: none;
+      }
+      &3 {
+        display: none;
+      }
     }
 
     &__heading {
       @include defaultFlexСolumn();
-      justify-content: center;
+      justify-content: flex-start;
       height: 470px;
       width: 100%;
       &-h1 {
-        padding-top: 30px;
-        padding-left: 40px;
+        padding-top: 60px;
         width: 90% !important;
         font-size: 50px;
         color: #fff;
@@ -169,13 +228,15 @@
     }
 
     &__advantages {
-      height: 250px;
+      padding-left: 0;
+      padding-right: 0;
+      height: 165px;
       @include defaultFlex();
       justify-content: space-around;
       align-content: flex-start;
-      align-items: flex-end;
-      width: 100% !important;
-      padding-top: 100px;
+      align-items: flex-start;
+      width: 100%;
+      padding-top: 35px;
       &-section {
         @include defaultFlexСolumn();
         padding-top: 0px;
@@ -209,7 +270,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 700px) {
   body .banner {
     margin-top: 17px;
     margin-bottom: 0px;
@@ -218,7 +279,7 @@
       position: relative;
       font-style: normal;
       font-weight: 500;
-      font-size: 12px !important;
+      font-size: 12px;
       line-height: 20px;
       padding-top: 10px;
       padding-bottom: 40px;
@@ -247,6 +308,7 @@
         font-size: 20px;
         line-height: 24px;
         padding-top: 0;
+        padding-bottom: 70px;
       }
     }
 
@@ -254,11 +316,58 @@
       @include defaultFlexСolumn();
       align-content: center;
       align-items: center;
-      padding-top: 100px;
       margin: 0 auto;
       height: auto;
       width: 72%;
-      padding-top: 37px !important;
+      padding-top: 0;
     }
+  }
+}
+
+@media (max-width: 400px) {
+  body .banner {
+    &__heading {
+      justify-content: flex-start;
+      min-height: 200px;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 1620px) {
+  .banner__heading-h1 {
+    padding-top: 30px;
+    width: 62%;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1490px) {
+  .banner__heading-h1 {
+    padding-top: 30px;
+    width: 59%;
+    font-size: 35px;
+  }
+  .banner__advantages {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1380px) {
+  .banner__heading-h1 {
+    padding-top: 30px;
+    width: 63%;
+  }
+  .banner__advantages {
+    width: 65%;
+  }
+}
+
+@media (max-width: 1290px) {
+  .banner__heading-h1 {
+    width: 80%;
+  }
+  .banner__advantages {
+    width: 80%;
   }
 }

@@ -1,6 +1,6 @@
 .header-arrow-menu-nav {
   position: absolute;
-  top: 76px;
+  top: 101px;
   display: flex;
   height: 50px;
   width: 100%;
@@ -13,6 +13,7 @@
   padding-right: 18%;
   z-index: -1;
   opacity: 0;
+  transition: 0.2s linear;
 
   &-a {
     cursor: pointer;

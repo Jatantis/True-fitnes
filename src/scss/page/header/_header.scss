@@ -39,12 +39,10 @@
     padding-right: 2%;
   }
   .block-header .block-header-space-left {
-    padding-left: 41px;
     width: 30%;
   }
 
   .block-header .block-header-space-right {
-    padding-right: 41px;
     width: 70%;
   }
 }
@@ -56,18 +54,16 @@
   }
 
   .block-header .block-header-space-left {
-    padding-left: 11px;
     width: 50%;
   }
 
   .block-header .block-header-space-right {
-    padding-right: 11px;
     width: 50%;
   }
 }
 
 @media (max-width: 1800px) {
   .block-header {
-    padding: 26px 2% 0 2%;
+    padding: 26px 3% 0 3%;
   }
 }
