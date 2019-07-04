@@ -43,6 +43,63 @@
     }
   }
 }
+// modal button in footer mobile page (страница сравнение)
+
+@media (max-width: 767px) {
+  .modal-button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #00000080;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    &-comparison {
+      text-align: center;
+      height: 30px;
+      width: 45%;
+      min-width: 150px;
+      max-width: 340px;
+      background-color: #2ebfb1;
+      padding: 3px 15px;
+      &::after {
+        content: "сравнить";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 25px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #ffffff;
+      }
+    }
+  }
+}
+// subscribe
+.button-subscribe {
+  padding-top: 15%;
+  width: 100%;
+
+  &-button {
+    width: 100%;
+    background-color: #2ebfb1;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    &:hover {
+      background-color: #2ebfb0e3;
+    }
+  }
+}
 
 //show all
 

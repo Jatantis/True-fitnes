@@ -31,3 +31,9 @@
 @media (max-width: 1750px) {
   @include default-padding();
 }
+@media (max-width: 767px) {
+  .goods-swiper-container-h3 {
+    padding-top: 50px;
+
+  }
+}

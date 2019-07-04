@@ -1,27 +1,21 @@
 .feedback-color {
   background-color: #e6e8ed;
   width: 100%;
-  
+
   margin-top: 1.15%;
 
   .feedback {
     @include defaultContainer();
     @include defaultFlex();
+    flex-wrap: nowrap;
     max-width: 70%;
     padding-top: 2.5%;
     padding-bottom: 2.7%;
     padding-left: 5%;
 
-    // &-logo {
-    //   width: 15%;
-    //   &-icon {
-    //   }
-    // }
-
     &-descriptin {
       padding-right: 8%;
       padding-left: 1.5%;
-      padding-top: 0.5%;
       width: 85%;
       &-name {
         font-weight: 500;
@@ -29,6 +23,16 @@
         line-height: 30px;
         letter-spacing: 0.03em;
         color: #222222;
+      }
+      &-jobs {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #323232;
+        padding-top: 10px;
+        padding-bottom: 20px;
       }
       &-text {
         padding-top: 1%;
@@ -76,6 +80,9 @@
           letter-spacing: 0.03em;
           color: #222222;
         }
+        &-jobs {
+          display: none;
+        }
         &-text {
           padding-top: 1%;
           font-style: normal;
@@ -91,12 +98,12 @@
 }
 
 @media (max-width: 767px) {
-  .feedback-color {
+  body .feedback-color {
     @include defaultFlex();
     background-color: #e6e8ed;
     width: 100%;
     max-height: 630px;
-    margin-top: 7.5%;
+    margin-top: -50px;
     min-height: 302px;
 
     .feedback {

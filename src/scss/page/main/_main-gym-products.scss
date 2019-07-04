@@ -229,13 +229,20 @@
   }
 }
 @media (max-width: 767px) {
-  .gym-products {
+  .main-index .gym-products {
     height: auto;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: center;
     margin-top: 0;
+    h2 {
+      font-size: 20px;
+      line-height: 24px;
+      padding-bottom: 9px;
+      letter-spacing: 0.01em;
+      top: 0;
+    }
   }
 
   .main-index .gym-products-section {

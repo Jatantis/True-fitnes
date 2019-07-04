@@ -189,8 +189,11 @@
 }
 
 @media (max-width: 1023px) {
+  .modal {
+    overflow-x: hidden;
+  }
   .modal .modal-content {
-    width: 437px;
+    width: 300px;
     padding-left: 5.5%;
     padding-right: 5.5%;
     .modal-nav {

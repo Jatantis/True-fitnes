@@ -4,6 +4,7 @@
   padding-top: 7%;
 
   .search-line {
+    padding-top: 130px;
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
@@ -52,6 +53,10 @@
 @media (max-width: 1750px) {
   .search-page {
     @include default-padding();
+
+    .search-line {
+      padding-top: 40px;
+    }
   }
 }
 
@@ -74,11 +79,11 @@
 }
 
 @media (max-width: 767px) {
-  .search-page .search-line-notice {
+  body .search-page .search-line-notice {
     font-size: 12px;
     line-height: 15px;
   }
-  .goods-swiper-container-h3 {
+  body .goods-swiper-container-h3 {
     font-size: 14px;
     line-height: 17px;
   }

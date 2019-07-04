@@ -1,50 +1,17 @@
 .comparison-page {
   @include defaultFlex();
   width: 100%;
-  .header-h1 {
-    padding-bottom: 50px;
+  .h1-normal {
+    padding-bottom: 32px;
+    padding-top: 45px;
   }
-  &-title {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
-    letter-spacing: 0.03em;
-    color: #444444;
-
-    &:first-child {
-      font-style: normal;
-      font-weight: 600;
-      font-size: 22px;
-      line-height: 27px;
-      text-transform: uppercase;
-      color: #222222;
-    }
-  }
-  .w {
-    &-one {
-      width: 30%;
-    }
-    &-two {
-      width: 13%;
-    }
-    &-three {
-      width: 19%;
-    }
-    &-four {
-      width: 24%;
-    }
-    &-five {
-      width: 13%;
-    }
-  }
-
   .match-else {
     float: left;
     padding-top: 70px;
     padding-bottom: 70px;
     width: 300px;
     &-p {
+      cursor: pointer;
       font-style: normal;
       font-weight: bold;
       font-size: 18px;
@@ -53,6 +20,7 @@
       text-transform: uppercase;
       color: #222222;
       position: relative;
+      transition: 0.2s linear;
       &::after {
         content: "";
         position: absolute;
@@ -62,6 +30,11 @@
         top: 30px;
         right: 0;
         z-index: 1;
+        transition: 0.2s linear;
+      }
+      &:hover:after,
+      &:focus:after {
+        top: -10px;
       }
     }
   }
@@ -87,23 +60,6 @@
 }
 @media (max-width: 1023px) {
   .comparison-page {
-    .w {
-      &-one {
-        width: 35%;
-      }
-      &-two {
-        width: 12%;
-      }
-      &-three {
-        width: 17%;
-      }
-      &-four {
-        width: 22%;
-      }
-      &-five {
-        width: 13%;
-      }
-    }
   }
   .open .accordionItemContent {
     padding-left: 0;
@@ -219,6 +175,10 @@
   }
 }
 @media (max-width: 650px) {
+  .mobile-accordion-item .mobile-accordion-item-h3 {
+    font-size: 9px;
+    line-height: 12px;
+  }
   .comparison-page .header-h1 {
     display: inline-block;
     font-style: normal;

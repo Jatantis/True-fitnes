@@ -154,27 +154,36 @@
 }
 
 @media (max-width: 767px) {
-  .main-comparison-instruction {
+  main .main-comparison-instruction {
     font-size: 12px;
     line-height: 15px;
     width: max-content;
   }
-
-  .main-comparison-nav .main-comparison-nav-item {
+  .main-comparison .header-h1 {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 24px;
+    padding-left: 0;
+  }
+  main .main-comparison-nav {
+    padding-top: 8px;
+  }
+  main .main-comparison-nav .main-comparison-nav-item {
     width: 100%;
+    padding-bottom: 5px;
   }
 
-  .main-comparison-nav-item-p {
+  main .main-comparison-nav-item-p {
     font-size: 12px;
     line-height: 15px;
   }
 
-  .main-comparison-goods-target-p {
+  main .main-comparison-goods-target-p {
     font-size: 12px;
     line-height: 15px;
   }
 
-  .main-comparison-goods-target {
+  .main-comparison-goods .main-comparison-goods-target {
     width: 50%;
   }
 }

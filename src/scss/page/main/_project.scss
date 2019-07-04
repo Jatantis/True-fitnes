@@ -134,6 +134,7 @@
       &-descripion {
         opacity: 0;
         font-weight: 600;
+        font-style: normal;
         font-size: 18px;
         line-height: 20px;
         letter-spacing: 0.03em;
@@ -142,7 +143,7 @@
         position: relative;
         padding-left: 12%;
         bottom: 2.5%;
-        transition: 0.1s linear 0.2s;
+        transition: 0.05s ease-out 0.2s;
       }
     }
   }
@@ -177,6 +178,12 @@
     .products-descripion {
       opacity: 1;
     }
+  }
+}
+
+@media (max-width: 1750px) {
+  .main-project {
+    @include default-padding();
   }
 }
 
@@ -282,7 +289,7 @@
     }
   }
 
-  .project-products {
+  body .main-project .project-products {
     height: auto;
     flex-direction: column;
     flex-wrap: wrap;
@@ -306,10 +313,11 @@
     }
   }
 
-  .products {
+  .project-products .project-products-section .products {
     &-name {
+      padding-bottom: 0;
       padding-left: 8%;
-      padding-top: 108px;
+      padding-top: 10px;
 
       h2 {
         font-weight: 900;
@@ -322,11 +330,13 @@
         }
       }
       h3 {
-        font-weight: 900;
+        font-weight: 600;
+        font-style: normal;
+        padding-bottom: 2px;
+        top: 20px;
         font-size: 10px;
         line-height: 15px;
-        padding-bottom: 2px;
-        letter-spacing: 0.01em;
+        letter-spacing: 0.03em;
       }
     }
 

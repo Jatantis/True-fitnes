@@ -7,7 +7,7 @@
   margin-bottom: 4.17%;
 
   .goods-catalog-second {
-    padding-top: 120px;
+    padding-top: 60px;
   }
   &-description {
     width: 50%;
@@ -224,18 +224,18 @@
 }
 
 @media (max-width: 767px) {
-  .treadmills .goods-catalog-second {
+  body .treadmills .goods-catalog-second {
     padding-top: 0px;
   }
-  .treadmills .compas .compas-description-h3 {
+  body .treadmills .compas .compas-description-h3 {
     font-size: 12px;
     line-height: 15px;
   }
-  .treadmills .compas .compas-description-p {
+  body .treadmills .compas .compas-description-p {
     font-size: 10px;
     line-height: 20px;
   }
-  .treadmills .compas .compas-description-a {
+  body .treadmills .compas .compas-description-a {
     font-size: 12px;
     line-height: 25px;
   }
@@ -247,6 +247,8 @@
     margin-bottom: 6.5%;
 
     .compas {
+      padding-top: 0;
+
       &-description {
         width: 100%;
 
@@ -284,7 +286,7 @@
     .goods-catalog-second .goods-cart {
       padding-top: 4%;
       width: 100%;
-      height: 35%;
+      height: auto;
     }
   }
 
