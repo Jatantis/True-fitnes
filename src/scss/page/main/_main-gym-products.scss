@@ -19,12 +19,31 @@
         bottom: 0;
         right: 0;
         width: 100%;
-        height: 4px;
+        height: 6px;
         background: #fff;
       }
 
       .products-img-fon .gym-products-text .products-descripion {
         opacity: 0;
+      }
+    }
+    &:last-child {
+      &:hover {
+        .gym-products-text {
+          background-color: rgba(0, 0, 0, 0.2);
+          justify-content: center;
+
+          .products-name h2 {
+            bottom: 25px;
+
+            &::after {
+              bottom: 65px;
+            }
+          }
+          .products-descripion {
+            opacity: 1;
+          }
+        }
       }
     }
   }
@@ -113,7 +132,7 @@
         bottom: 0;
         right: 0;
         width: 100%;
-        height: 4px;
+        height: 6px;
         z-index: -1;
         background: #2ebfb1;
         transition: 0.2s linear;

@@ -65,13 +65,13 @@
         position: absolute;
         font-style: normal;
         font-weight: 900;
-        font-size: 25px;
+        font-size: 24px;
         line-height: 30px;
         text-transform: uppercase;
         color: #fff;
         bottom: 11.7%;
         padding-bottom: 11px;
-        left: 14%;
+        left: 12%;
         letter-spacing: 0.01em;
         transition: 0.2s linear;
         z-index: 1;
@@ -181,6 +181,10 @@
     left: 5%;
     font-size: 18px;
   }
+  .re-linking-four-sections .re-linking-four-sections-block .re-linking-p {
+    font-size: 20px;
+    left: 9%;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -287,7 +291,7 @@
 }
 
 @media (max-width: 767px) {
-  .re-linking-four-sections {
+  .main-padding-bottom1-3 .re-linking-four-sections {
     margin-top: 4px;
     height: auto;
     max-height: 337px;

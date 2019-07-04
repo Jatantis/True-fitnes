@@ -23,6 +23,10 @@
     line-height: 20px;
     letter-spacing: 0.03em;
     color: #222222;
+    position: relative;
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 

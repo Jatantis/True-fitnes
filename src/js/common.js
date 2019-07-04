@@ -30,7 +30,6 @@ if (document.querySelector('.accordion-wrapper-desctop') !== null) {
         accordionDesctop.style.display = 'none';
     } else {
         accordionMobile.style.display = 'none';
-        console.log('lalal');
     }
 }
 
@@ -593,24 +592,70 @@ function showSubMenuPower() {
 const arrowButtonPower = document.querySelector('.header-arrow-menu-power');
 const arrowButton = document.querySelector('.header-arrow-menu');
 const arrowMenu = document.querySelector('.header-arrow-menu-nav');
+const arrowMenuLink = document.querySelector('.header-arrow-menu-nav-a');
 
-arrowButtonPower.addEventListener("mouseover", showArrowMenu);
-arrowButton.addEventListener("mouseover", showArrowMenu);
+// arrowButtonPower.addEventListener("mouseenter", showArrowMenu);
+arrowButton.addEventListener("mouseenter", showArrowMenu);
+arrowButton.addEventListener("mouseenter", showArrowMenu);
+arrowMenu.addEventListener("mouseleave", closeMenu);
+arrowButtonPower.addEventListener("mouseenter", showArrowMenuPower);
+function closeMenu() {
+    arrowMenu.style.opacity = '0';
+    arrowMenu.style.zIndex = '-1';
+    arrowButton.classList.remove('showMenu');
+    arrowButtonPower.classList.remove('showMenu');
+    a = true;
+}
+
 let a = true;
 let b = true;
+
 function showArrowMenu() {
     if (a) {
         arrowMenu.style.opacity = '1';
         arrowMenu.style.zIndex = '1';
+        arrowButton.classList.toggle('showMenu');
         a = false;
+        if (b == false) {
+            arrowMenu.style.opacity = '1';
+            arrowMenu.style.zIndex = '1';
+            arrowButtonPower.classList.remove('showMenu');
+            b = true;
+            a = false;
+        }
     } else {
         arrowMenu.style.opacity = '0';
-        arrowMenu.style.zIndex = '-1';
+        arrowMenu.style.zIndex = '-1'
+        arrowButton.classList.toggle('showMenu');
         a = true;
     }
-
-
 }
+
+
+function showArrowMenuPower() {
+    if (b) {
+        arrowMenu.style.opacity = '1';
+        arrowMenu.style.zIndex = '1';
+        arrowButtonPower.classList.toggle('showMenu');
+        b = false;
+        if (a == false) {
+            arrowMenu.style.opacity = '1';
+            arrowMenu.style.zIndex = '1';
+            arrowButton.classList.remove('showMenu');
+            a = true;
+            b = false;
+        }
+    } else {
+        arrowButtonPower.classList.remove('showMenu');
+        arrowMenu.style.opacity = '0';
+        arrowMenu.style.zIndex = '-1';
+        b = true;
+    }
+}
+
+// buttonBike.classList.remove('isActive');
+// buttonStep.classList.toggle('isActive');
+
 
 // request form footer
 

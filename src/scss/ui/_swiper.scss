@@ -67,6 +67,7 @@
 @media (max-width: 1750px) {
   .main-padding-bottom1-3 {
     @include default-padding();
+    margin-top: 40px;
   }
 }
 

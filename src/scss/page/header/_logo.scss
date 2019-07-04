@@ -9,9 +9,9 @@
     @include defaultFlex();
     justify-content: flex-start;
     &-svg {
-      height: 68%;
+      height: 36px;
       position: relative;
-      right: 13%;
+      right: 20px;
     }
   }
 }

@@ -7,7 +7,7 @@
   height: 80px;
   margin-bottom: 34px;
   padding-top: 26px;
-  &-menu-a{
+  &-menu-a {
     cursor: pointer;
   }
 }
@@ -55,6 +55,7 @@
 
   .block-header .block-header-space-left {
     width: 50%;
+    justify-content: flex-start;
   }
 
   .block-header .block-header-space-right {

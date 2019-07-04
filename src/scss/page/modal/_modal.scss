@@ -8,6 +8,10 @@
   background-color: rgba(85, 85, 85, 0.2);
 }
 
+.modal-nav-no-desctop-menu-wrapper {
+  padding-top: 40px;
+}
+
 .modal {
   display: flex;
   justify-content: flex-end;
@@ -22,6 +26,7 @@
   transition: 0.3s linear;
 
   .sum-menu-cardio {
+    height: auto;
     position: absolute;
     opacity: 0;
     z-index: -1;
@@ -36,13 +41,13 @@
   }
 
   &-content {
+    height: 100%;
     position: absolute;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     align-items: flex-start;
     width: 606px;
-    height: 100%;
     background-color: #fff;
     padding-left: 6.5%;
     padding-right: 5%;
@@ -54,7 +59,7 @@
       display: flex;
       justify-content: flex-end;
       align-content: flex-end;
-      width: 100%;
+      width: 168%;
       height: 78px;
       margin-bottom: 11%;
       margin-top: 40px;
@@ -73,12 +78,12 @@
       .search-container {
         background-color: #e6e8ed;
         border-radius: 4px;
-        height: 100%;
-        width: 100%;
+        height: 40px;
+        width: 160%;
 
         .modal-search-input {
           background-color: #e6e8ed;
-          width: 85%;
+          width: 80%;
           height: 100%;
           padding-left: 20px;
         }
@@ -86,22 +91,24 @@
         .search-icon {
           position: relative;
           top: 0;
-          right: 7px;
+          right: -9px;
         }
       }
     }
 
     .modal-nav {
+      height: 100%;
       display: flex;
       width: 100%;
       flex-direction: column;
 
       &-no-desctop-menu {
+        position: relative;
         width: 100%;
         display: none;
         flex-direction: column;
         padding-bottom: 40px;
-        border-bottom: 2px solid #e6e8ed;
+        height: 50%;
         &-a {
           cursor: pointer;
           width: 83%;
@@ -117,18 +124,20 @@
         &-svg {
           position: absolute;
           top: 45px;
-          right: 0;
+          right: -117px;
         }
         &-svg-power {
           position: absolute;
           top: 45px;
-          right: 0;
+          right: -104px;
         }
         &-sub-menu {
+          height: auto;
           width: 65%;
           display: flex;
           flex-direction: column;
           &-a {
+            height: auto;
             font-style: normal;
             font-weight: 600;
             font-size: 16px;
@@ -145,10 +154,13 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+        height: auto;
+        padding-top: 94px;
         &-a {
           font-weight: bold;
+          height: auto;
           font-size: 25px;
-          line-height: 30px;
+    line-height: 48px;
           text-transform: uppercase;
           color: #222222;
           padding-top: 40px;
@@ -171,7 +183,7 @@
           }
           &:hover:after,
           &:focus:after {
-            top: 75px;
+            top: 80px;
             opacity: 1;
           }
         }
@@ -202,6 +214,7 @@
       }
       &-menu {
         &-a {
+          padding-top: 25px;
           font-size: 14px;
           line-height: 25px;
           &:after {
@@ -218,24 +231,38 @@
 }
 
 @media (max-width: 767px) {
+  .modal-content .posotoin-button-close {
+    width: 100%;
+  }
+
   .modal .modal-content {
     width: 320px;
     padding-left: 5.5%;
     padding-right: 5.5%;
+    height: 100%;
 
     .modal-search {
       width: 100%;
+      height: auto;
+      .search-container {
+        width: 100%;
+      }
     }
     .modal-nav {
+      height: 1000px;
       &-no-desctop-menu {
+        height: 1000px;
         &-a {
+          height: auto;
           font-size: 12px;
           line-height: 17px;
-          padding-top: 30px;
           width: 100%;
         }
         &-sub-menu {
+          height: auto;
+
           &-a {
+            height: auto;
             font-size: 11px;
             line-height: 15px;
             padding-top: 20px;
@@ -245,26 +272,41 @@
       }
 
       &-menu {
+        height: auto;
         &-a {
+          height: auto;
           font-size: 12px;
           line-height: 17px;
           &:after {
+            height: auto;
             display: none;
           }
           &:hover:after,
           &:focus:after {
+            height: auto;
             display: none;
           }
         }
       }
     }
   }
+
+  .test-first {
+    height: 25%;
+    width: 100%;
+  }
+  .modal-nav {
+    width: 100%;
+  }
+  .test {
+    height: 50%;
+    width: 100%;
+  }
+
   .modal-content .modal-nav-no-desctop-menu-svg {
-    top: 33px;
     height: 7px;
   }
   .modal-content .modal-nav-no-desctop-menu-svg-power {
-    top: 33px;
     height: 7px;
   }
 }

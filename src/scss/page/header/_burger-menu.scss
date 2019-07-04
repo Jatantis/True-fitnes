@@ -5,7 +5,8 @@
   @include defaultFlex();
   align-content: flex-end;
   font-style: normal;
-  padding-bottom: 7px;
+  padding-bottom: 10px;
+  align-items: flex-end;
 }
 .burger-menu-close {
   transition: 0.2s linear;
@@ -24,14 +25,21 @@
 }
 
 @media (max-width: 767px) {
+  .test {
+    border-top: 2px solid #e6e8ed;
+  }
+
   .block-header-burger-menu {
     width: 30px;
-    align-content: flex-start;
+    align-content: flex-end;
   }
 }
 @media (max-width: 767px) {
   .block-header-burger-menu {
+    padding-bottom: 3px;
+    margin-top: 15px;
+    height: 20px;
     width: 30px;
-    align-content: flex-start;
+    align-content: flex-end;
   }
 }
