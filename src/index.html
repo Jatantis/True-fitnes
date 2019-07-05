@@ -116,15 +116,15 @@
         </div>
         <div class="banner__advantages third">
             <div class="banner__advantages-section">
-                <img src="assets/img/svg/sprite/box.svg" alt="box" class="banner__advantages-section-img">
+                <img src="./assets/img/svg/sprite/box.svg" alt="box" class="banner__advantages-section-img">
                 <p class="banner__advantages-section-p">Популярные модели со<br />склада в МСК за 2 дня</p>
             </div>
             <div class="banner__advantages-section">
-                <img src="assets/img/svg/sprite/car.svg" alt="car" class="banner__advantages-section-img">
+                <img src="./assets/img/svg/sprite/car.svg" alt="car" class="banner__advantages-section-img">
                 <p class="banner__advantages-section-p">Поставка тренажеров из<br />США за 65 дней</p>
             </div>
             <div class="banner__advantages-section">
-                <img src="assets/img/svg/sprite/aircraft.svg" alt="aircraft" class="banner__advantages-section-img">
+                <img src="./assets/img/svg/sprite/aircraft.svg" alt="aircraft" class="banner__advantages-section-img">
                 <p class="banner__advantages-section-p">Поставка запчастей по<br />гарантии не более 7 дней</p>
             </div>
         </div>
@@ -147,7 +147,6 @@
                                 или выберите из нашего широкого выбора беговых дорожек.
                             </div>
                         </div>
-
                     </div>
                 </a>
             </div>
@@ -165,11 +164,8 @@
                                 или выберите из нашего широкого выбора беговых дорожек.
                             </div>
                         </div>
-
                     </div>
                 </a>
-
-
             </div>
             <div class="gym-products-section section-hover">
                 <a href="/index.html" class="gym-products-section-a">
@@ -187,8 +183,6 @@
                         </div>
                     </div>
                 </a>
-
-
             </div>
             <div class="gym-products-section section-hover">
                 <a href="/index.html" class="gym-products-section-a">
@@ -206,8 +200,6 @@
                         </div>
                     </div>
                 </a>
-
-
             </div>
             <div class="gym-products-section section-hover">
                 <a href="/technology.html" class="gym-products-section-a">
@@ -225,8 +217,6 @@
                         </div>
                     </div>
                 </a>
-
-
             </div>
             <div class="gym-products-section">
                 <a href="/project.html" class="gym-products-section-a">
@@ -240,8 +230,6 @@
                         </div>
                     </div>
                 </a>
-
-
             </div>
         </div>
     </main>
@@ -249,6 +237,10 @@
     <div class="page-inner">
     </div>
     <!--START FOOTER-->
+
+    <!--START SCROLL TO TOP-->
+    <!--END SCROLL TO TOP-->
+
     <!--START MODAL-->
     <div class="modal burger-modal">
         <div id="scrollbar-modal" class="modal-content">
@@ -265,14 +257,14 @@
                 <div class="modal-search">
                     <form class="search-container">
                         <input type="text" class="modal-search-input" id="search-bar" placeholder="">
-                        <a href="/search.html"><img class="search-icon" src="assets/img/svg/sprite/search.svg"></a>
+                        <a href="/search.html"><img class="search-icon" src="./assets/img/svg/sprite/search.svg"></a>
                     </form>
                 </div>
             </div>
             <nav class="modal-nav">
                 <div class="modal-nav-no-desctop-menu">
                     <div class="modal-nav-no-desctop-menu-wrapper">
-                        <a href="/cardio.html" class="modal-nav-no-desctop-menu-a no-desctop-cardio">кардио<svg
+                        <a class="modal-nav-no-desctop-menu-a no-desctop-cardio">кардио<svg
                                 class="modal-nav-no-desctop-menu-svg" width="20" height="11" viewBox="0 0 20 11"
                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g opacity="0.8">
@@ -293,7 +285,7 @@
                         </div>
                     </div>
                     <div class="modal-nav-no-desctop-menu-wrapper">
-                        <a href="/power.html" class="modal-nav-no-desctop-menu-a no-desctop-power">силовые<svg
+                        <a class="modal-nav-no-desctop-menu-a no-desctop-power">силовые<svg
                                 class="modal-nav-no-desctop-menu-svg-power" width="20" height="11" viewBox="0 0 20 11"
                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g opacity="0.8">
@@ -335,23 +327,26 @@
             <div class="form-request">
                 <p class="form-request-title">оставьте заявку</p>
                 <form class="footer-form">
+                    <label for="inp" class="inp">
+                        <input type="text" id="tel" placeholder="&nbsp;">
+                        <span class="label">телефон</span>
 
-                    <div class="footer-form__row">
-                        <label class="label-style label-tel">телефон</label><br />
-                        <input class="input-tel" type="text" placeholder="">
-                    </div>
-                    <div class="footer-form__row">
-                        <label class="label-style label-email">почта</label><br />
-                        <input class="input-email" type="text" placeholder="">
-                    </div>
-                    <div class="footer-form__row">
-                        <label class="label-style label-city">город</label><br />
-                        <input class="input-city" type="text" placeholder="">
-                    </div>
-                    <div class="footer-form__row">
-                        <label class="label-style label-desc">описание проекта</label><br />
-                        <input class="input-desc" type="text" placeholder="">
-                    </div>
+                    </label>
+                    <br />
+                    <label for="inp" class="inp">
+                        <input type="text" id="email" placeholder="&nbsp;">
+                        <span class="label">почта</span>
+                    </label>
+                    <br />
+                    <label for="inp" class="inp">
+                        <input type="text" id="city" placeholder="&nbsp;">
+                        <span class="label">город</span>
+                    </label>
+                    <br />
+                    <label for="inp" class="inp">
+                        <input type="text" id="description" placeholder="&nbsp;">
+                        <span class="label">описание проекта</span>
+                    </label>
                     <div class="text-political-confidence">
                         <p>Нажимая на кнопку, вы даете согласие на обработку персональных данных
                             и соглашаетесь с политикой конфиденциальности.</p>
@@ -388,7 +383,6 @@
                 </div>
             </div>
         </div>
-
     </footer>
     <div class="footer-line">
         <div class="line-left">

@@ -52,7 +52,7 @@
 #customize-controls {
   @include defaultFlex();
   @include sliderCustomizeControls();
-  
+
   &-search-page {
     @include defaultFlex();
     @include sliderCustomizeControls();
@@ -102,12 +102,18 @@
 }
 
 .slider-item {
+  cursor: pointer;
   text-align: center;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
   z-index: 1;
   height: auto;
+  &:hover {
+    .slider-item-p {
+      opacity: 0.6;
+    }
+  }
 
   &-img {
     display: inline-block;
@@ -131,6 +137,7 @@
     text-align: center;
     text-transform: uppercase;
     color: #313131;
+    transition: 0.2s linear;
   }
 }
 

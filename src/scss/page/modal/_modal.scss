@@ -10,9 +10,14 @@
 
 .modal-nav-no-desctop-menu-wrapper {
   padding-top: 40px;
+  height: auto;
+}
+.fisedPage {
+  position: fixed;
 }
 
 .modal {
+  overflow-x: hidden;
   display: flex;
   justify-content: flex-end;
   position: absolute;
@@ -97,7 +102,7 @@
     }
 
     .modal-nav {
-      height: 100%;
+      height: 75%;
       display: flex;
       width: 100%;
       flex-direction: column;
@@ -108,7 +113,7 @@
         display: none;
         flex-direction: column;
         padding-bottom: 40px;
-        height: 50%;
+        height: auto;
         &-a {
           cursor: pointer;
           width: 83%;
@@ -155,12 +160,11 @@
         flex-direction: column;
         width: 100%;
         height: auto;
-        padding-top: 94px;
         &-a {
           font-weight: bold;
           height: auto;
           font-size: 25px;
-    line-height: 48px;
+          line-height: 48px;
           text-transform: uppercase;
           color: #222222;
           padding-top: 40px;
@@ -204,15 +208,20 @@
   .modal {
     overflow-x: hidden;
   }
+
   .modal .modal-content {
-    width: 300px;
+    height: auto;
+    width: 500px;
+    overflow-y: scroll;
     padding-left: 5.5%;
     padding-right: 5.5%;
     .modal-nav {
       &-no-desctop-menu {
         display: flex;
+        height: auto;
       }
       &-menu {
+        height: auto;
         &-a {
           padding-top: 25px;
           font-size: 14px;
@@ -236,10 +245,10 @@
   }
 
   .modal .modal-content {
-    width: 320px;
+    width: 320px !important;
     padding-left: 5.5%;
     padding-right: 5.5%;
-    height: 100%;
+    height: auto;
 
     .modal-search {
       width: 100%;
@@ -249,9 +258,9 @@
       }
     }
     .modal-nav {
-      height: 1000px;
+      padding-top: 15px;
       &-no-desctop-menu {
-        height: 1000px;
+        height: auto;
         &-a {
           height: auto;
           font-size: 12px;
@@ -299,7 +308,7 @@
     width: 100%;
   }
   .test {
-    height: 50%;
+    height: auto;
     width: 100%;
   }
 

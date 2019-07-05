@@ -82,13 +82,13 @@ module.exports = {
                     MiniCssExtractPlugin.loader,
                     {
                         loader: 'css-loader',
-                        options: {sourceMap: false}
+                        options: { sourceMap: false }
                     }, {
                         loader: 'postcss-loader',
-                        options: {sourceMap: false, config: {path: `${PATHS.src}/js/postcss.config.js`}}
+                        options: { sourceMap: false, config: { path: `${PATHS.src}/js/postcss.config.js` } }
                     }, {
                         loader: 'sass-loader',
-                        options: {sourceMap: false}
+                        options: { sourceMap: false }
                     },
 
                 ],
@@ -113,7 +113,7 @@ module.exports = {
         new HappyPack({
             id: 'styles',
             threads: 2,
-            loaders: [ 'css-loader', 'sass-loader' ]
+            loaders: ['css-loader', 'sass-loader']
         }),
 
         new HtmlWebpackPlugin({
@@ -225,9 +225,9 @@ module.exports = {
         }),
 
         new CopyWebpackPlugin([
-            {from: `${PATHS.src}/img`, to: `${PATHS.assets}img`},
-            {from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts`},
-            {from: `${PATHS.src}/static`, to: ''},
+            { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
+            { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
+            { from: `${PATHS.src}/static`, to: '' },
         ]),
 
 

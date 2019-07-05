@@ -2,6 +2,7 @@
   &__row {
     position: relative;
     .label-style {
+      height: auto;
       font-weight: 500;
       font-size: 16px;
       line-height: 25px;
@@ -9,7 +10,112 @@
       text-transform: uppercase;
       color: #222222;
       position: absolute;
-      bottom: 30px;
+      bottom: 35px;
+      pointer-events: none;
+      transition: 0.2s linear;
     }
+  }
+}
+
+.inp {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 280px;
+}
+.inp .label {
+  pointer-events: none;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  transform-origin: 0 0;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #222222;
+  opacity: 0.8;
+}
+
+.inp input {
+  -webkit-appearance: none;
+  width: 100%;
+  border: 0;
+  font-family: inherit;
+  padding: 12px 0;
+  height: 48px;
+  border-bottom: 2px solid #c8ccd4;
+  background: none;
+  border-radius: 0;
+  transition: all 0.15s ease;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #222222;
+  opacity: 0.8;
+}
+
+.inp input:not(:placeholder-shown) + span {
+  color: #5a667f;
+  transform: translateY(-26px) scale(0.75);
+}
+.inp input:focus {
+  background: none;
+  outline: none;
+}
+.inp input:focus + span {
+  transform: translateY(-26px) scale(0.75);
+}
+.inp input:focus + span + .border {
+  transform: scaleX(1);
+}
+
+@media (max-width: 1023px) {
+  .footer-form {
+    &__row {
+      position: relative;
+      .label-style {
+        font-size: 14px;
+        line-height: 25px;
+      }
+    }
+  }
+  .inp .label {
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  .inp input {
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-form {
+    &__row {
+      position: relative;
+      .label-style {
+        font-size: 10px;
+        line-height: 25px;
+      }
+    }
+  }
+  .inp input:focus + span {
+    transform: translateY(-10px) scale(0.80);
+  }
+  .inp .label {
+    font-size: 10px;
+    line-height: 25px;
+    top: 0px;
+  }
+
+  .inp input {
+    font-size: 10px;
+    line-height: 25px;
   }
 }

@@ -657,7 +657,7 @@ function showArrowMenuPower() {
 // buttonStep.classList.toggle('isActive');
 
 
-// request form footer
+// input form request footer
 
 const labelFormTel = document.querySelector('.label-tel');
 const labelFormEmail = document.querySelector('.label-email');
@@ -669,3 +669,11 @@ const inputFormEmail = document.querySelector('.input-email');
 const inputFormCity = document.querySelector('.input-city');
 const inputFormDesc = document.querySelector('.input-desc');
 
+
+// aciveInput
+
+inputFormTel.addEventListener("click", aciveLabel);
+
+function aciveLabel() {
+    labelFormTel.classList.toggle('aciveInput');
+}
