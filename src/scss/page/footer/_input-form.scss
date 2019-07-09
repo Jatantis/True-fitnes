@@ -1,3 +1,16 @@
+.service .form-request {
+  justify-content: flex-start;
+  align-content: center;
+  width: 100%;
+
+  .inp {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 .form-request {
   display: flex;
   flex-direction: column;

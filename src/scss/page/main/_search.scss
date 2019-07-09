@@ -2,7 +2,9 @@
   @include defaultContainer();
   @include defaultFlex();
   padding-top: 7%;
-
+.line-notice-strong{
+      font-weight: 600;
+}
   .search-line {
     padding-top: 130px;
     display: flex;
@@ -14,6 +16,7 @@
     align-content: center;
 
     &-notice {
+      transition: 1s linear;
       width: 70%;
       font-style: normal;
       font-weight: 500;

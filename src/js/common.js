@@ -64,7 +64,6 @@ if (document.querySelector('.my-slider-first-lvl') !== null) {
         touch: true,
         preventScrollOnTouch: "auto",
         loop: true,
-        slideBy: "page",
         mouseDrag: true,
         swipeAngle: false,
         speed: 400,
@@ -88,7 +87,6 @@ let sliderTwo = {
     touch: true,
     preventScrollOnTouch: "auto",
     loop: true,
-    slideBy: "page",
     mouseDrag: true,
     swipeAngle: false,
     speed: 400,
@@ -118,7 +116,6 @@ let sliderThree = {
     touch: true,
     preventScrollOnTouch: "auto",
     loop: true,
-    slideBy: "page",
     mouseDrag: true,
     swipeAngle: false,
     speed: 400,
@@ -146,7 +143,6 @@ let sliderFour = {
     touch: true,
     preventScrollOnTouch: "auto",
     loop: true,
-    slideBy: "page",
     mouseDrag: true,
     swipeAngle: false,
     speed: 400,
@@ -176,7 +172,6 @@ let sliderFive = {
     touch: true,
     preventScrollOnTouch: "auto",
     loop: true,
-    slideBy: "page",
     mouseDrag: true,
     swipeAngle: false,
     speed: 400,
@@ -205,7 +200,6 @@ let sliderSix = {
     touch: true,
     preventScrollOnTouch: "auto",
     loop: true,
-    slideBy: "page",
     mouseDrag: true,
     swipeAngle: false,
     speed: 400,
@@ -234,7 +228,6 @@ let sliderSeven = {
     touch: true,
     preventScrollOnTouch: "auto",
     loop: true,
-    slideBy: "page",
     mouseDrag: true,
     swipeAngle: false,
     speed: 400,
@@ -262,7 +255,6 @@ let sliderEight = {
     touch: true,
     preventScrollOnTouch: "auto",
     loop: true,
-    slideBy: "page",
     mouseDrag: true,
     swipeAngle: false,
     speed: 400,
@@ -290,7 +282,6 @@ let sliderOneGoodsCart = {
     touch: true,
     preventScrollOnTouch: "auto",
     loop: true,
-    slideBy: "page",
     mouseDrag: true,
     swipeAngle: false,
     speed: 400,
@@ -309,7 +300,6 @@ let sliderFiveCart = {
     touch: true,
     preventScrollOnTouch: "auto",
     loop: true,
-    slideBy: "page",
     mouseDrag: true,
     swipeAngle: false,
     speed: 400,
@@ -340,7 +330,6 @@ let sliderSearche = {
     touch: true,
     preventScrollOnTouch: "auto",
     loop: true,
-    slideBy: "page",
     mouseDrag: true,
     swipeAngle: false,
     speed: 400,
@@ -371,7 +360,6 @@ let sliderSearchePage = {
     touch: true,
     preventScrollOnTouch: "auto",
     loop: true,
-    slideBy: "page",
     mouseDrag: true,
     swipeAngle: false,
     speed: 400,
@@ -403,7 +391,6 @@ let sliderСarusel = {
     touch: true,
     preventScrollOnTouch: "auto",
     loop: true,
-    slideBy: "page",
     mouseDrag: true,
     swipeAngle: false,
     speed: 400,
@@ -499,6 +486,7 @@ const burgerModalClose = document.querySelector('.burger-modal-close');
 // position: fixed;
 const backgroundFon = document.querySelector('.burger-modal');
 const modalNav = document.querySelector('.modal-content');
+const bodyFixed = document.querySelector('body');
 
 burgerModalClose.addEventListener("click", closeModal);
 burgerModalOpen.addEventListener("click", openModal);
@@ -509,14 +497,16 @@ function closeModal() {
     modalNav.style.transform = "translateX(50px)";
     modalNav.style.position = "absolute";
     backgroundFon.style.position = "absolute";
+    bodyFixed.style.overflowY = "auto"
 }
 
 function openModal() {
     backgroundFon.style.opacity = '1';
     backgroundFon.style.zIndex = '1';
     modalNav.style.transform = "translateX(0px)";
-    modalNav.style.position = "fixed";
+    modalNav.style.position = "absolute";
     backgroundFon.style.position = "fixed";
+    bodyFixed.style.overflowY = "hidden"
 }
 
 
@@ -669,11 +659,12 @@ const inputFormEmail = document.querySelector('.input-email');
 const inputFormCity = document.querySelector('.input-city');
 const inputFormDesc = document.querySelector('.input-desc');
 
+// arrow-up
 
-// aciveInput
+const bottonToUp = document.querySelector('.arrow-up');
 
-inputFormTel.addEventListener("click", aciveLabel);
+bottonToUp.addEventListener("click", upToTop);
 
-function aciveLabel() {
-    labelFormTel.classList.toggle('aciveInput');
+function upToTop() {
+    bodyFixed.scrollIntoView({ behavior: 'smooth' });
 }

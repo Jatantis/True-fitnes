@@ -29,8 +29,8 @@
       overflow: auto;
       @include defaultFlex();
       justify-content: center;
-      &-logo{
-          object-fit: cover;
+      &-logo {
+        object-fit: cover;
       }
     }
     .about-text {
@@ -97,9 +97,14 @@
 }
 
 @media (max-width: 767px) {
+  .about .breadcrumbs {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
   body .about .about-h1 {
     font-size: 20px;
     line-height: 24px;
+    padding-bottom: 30px;
   }
   body .about .about-lvl .about-text-h2 {
     font-size: 12px;

@@ -22,7 +22,7 @@
     &1 {
       opacity: 0;
       animation: fadeInUp 1s ease-in-out 0s forwards;
-      animation-delay: 1.3s;
+      animation-delay: 0.7s;
       position: absolute;
       background-image: url("../img/banner/banner-true3.png");
       background-repeat: no-repeat;
@@ -34,7 +34,7 @@
     &2 {
       opacity: 0;
       animation: fadeInUp 1.5s ease-in-out 0s forwards;
-      animation-delay: 1.6s;
+      animation-delay: 1s;
       position: absolute;
       background-image: url("../img/banner/banner-true2.png");
       background-repeat: no-repeat;
@@ -46,7 +46,7 @@
     &3 {
       opacity: 0;
       animation: fadeInUp 2s ease-in-out 0s forwards;
-      animation-delay: 2s;
+      animation-delay: 1.3s;
       position: absolute;
       background-image: url("../img/banner/banner-true1.png");
       background-repeat: no-repeat;
@@ -59,8 +59,8 @@
   &__heading {
     opacity: 0;
     // as we're using the same animation for each instance, call it here so we're not repeating it
-    animation: fadeInUp 0.7s ease-in-out 0s forwards;
-    animation-delay: 1s;
+    animation: fadeInUp 0.5s ease-in-out 0s forwards;
+    animation-delay: 0.5s;
     @include defaultFlexСolumn();
     justify-content: center;
     height: 50%;
@@ -84,7 +84,7 @@
     opacity: 0;
     // as we're using the same animation for each instance, call it here so we're not repeating it
     animation: fadeInUp 1s ease-in-out 0s forwards;
-    animation-delay: 2.5s;
+    animation-delay: 1.6s;
     height: 250px;
     @include defaultFlex();
     justify-content: space-between;
