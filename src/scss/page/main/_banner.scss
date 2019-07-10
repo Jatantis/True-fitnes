@@ -17,6 +17,8 @@
   position: relative;
   height: 500px;
   margin-bottom: 85px;
+  width: 92%;
+  overflow: hidden;
 
   &__img {
     &1 {
@@ -132,9 +134,6 @@
   body .banner {
     &__heading {
       padding-left: 2%;
-      &-h1 {
-        padding-left: 2%;
-      }
     }
 
     &__advantages {
@@ -152,24 +151,6 @@
       font-weight: 500;
       font-size: 14px;
     }
-    &__img {
-      &1 {
-        background-position-x: 447px;
-      }
-      &2 {
-        background-position-x: 447px;
-      }
-      &3 {
-        background-position-x: 447px;
-      }
-    }
-
-    &__heading {
-      &-h1 {
-        padding-left: 2%;
-        width: 62%;
-      }
-    }
 
     &__advantages {
       width: 57%;
@@ -180,6 +161,7 @@
 
 @media (max-width: 1023px) {
   body .banner {
+    width: 100%;
     margin-top: 25px;
     @include defaultFlexСolumn();
     justify-content: center;
@@ -347,7 +329,7 @@
   .banner__heading-h1 {
     padding-top: 30px;
     width: 59%;
-    font-size: 35px;
+    font-size: 33px;
   }
   .banner__advantages {
     width: 60%;
