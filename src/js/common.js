@@ -782,15 +782,16 @@ if (document.querySelector('.button-subscribe-button') !== null) {
 if (document.querySelector('.accordionWrapper') !== null) {
     // up to block
     const accordionWrapperMobile = document.querySelector('.accordionWrapper');
+    const accordionWrapperMobileOne = document.querySelector('.one');
     const accordionWrapperMobileTwo = document.querySelector('.two');
     const accordionWrapperMobileThree = document.querySelector('.three');
 
-    accordionWrapperMobileTwo.addEventListener("click", upToAccordionWrapper);
-    accordionWrapperMobileThree.addEventListener("click", upToAccordionWrapper);
+    // accordionWrapperMobileTwo.addEventListener("click", upToAccordionWrapper);
+    // accordionWrapperMobileThree.addEventListener("click", upToAccordionWrapper);
 
-    function upToAccordionWrapper() {
-        accordionWrapperMobile.scrollIntoView();
-    };
+    // function upToAccordionWrapper() {
+    //     accordionWrapperMobile.scrollIntoView();
+    // };
 
 
 
@@ -798,22 +799,70 @@ if (document.querySelector('.accordionWrapper') !== null) {
     const accItem = document.getElementsByClassName('accordionItem');
     const accHD = document.getElementsByClassName('accordionItemHeading');
 
-    for (i = 0; i < accHD.length; i++) {
-        accHD[i].addEventListener('click', toggleItem, false);
+
+    accordionWrapperMobileOne.addEventListener("click", OneAccordionOpen);
+    accordionWrapperMobileTwo.addEventListener("click", twoAccordionOpen);
+    accordionWrapperMobileThree.addEventListener("click", threeAccordionOpen);
+
+    function OneAccordionOpen() {
+        accordionWrapperMobileOne.classList.toggle('close');
+        accordionWrapperMobileOne.classList.toggle('open');
     }
 
-    function toggleItem() {
-
-        for (i = 0; i < accItem.length; i++) {
-            accItem[i].className = 'accordionItem close';
-        }
-
-        let itemClass = this.parentNode.className;
-        
-        if (itemClass == 'accordionItem close') {
-            this.parentNode.className = 'accordionItem open';
-        }
-
+    function twoAccordionOpen() {
+        accordionWrapperMobileTwo.classList.toggle('close');
+        accordionWrapperMobileTwo.classList.toggle('open');
     }
 
+    function threeAccordionOpen() {
+        accordionWrapperMobileThree.classList.toggle('close');
+        accordionWrapperMobileThree.classList.toggle('open');
+    }
+
+
+    // открывать один аккордион и авто закрывать другой (нельзя закрыть все)
+    // for (i = 0; i < accHD.length; i++) { 
+    //     accHD[i].addEventListener('click', toggleItem, false);
+    // }
+
+    // function toggleItem() {
+
+    //     for (i = 0; i < accItem.length; i++) {
+    //         accItem[i].className = 'accordionItem close';
+    //     }
+
+    //     let itemClass = this.parentNode.className;
+    //     if (itemClass == 'accordionItem close') {
+    //         this.parentNode.className = 'accordionItem open';
+    //     }
+    // }
+
+
+
+}
+
+
+if (document.querySelector('.box-box') !== null){
+    function boxInFooter() {
+        const boxTitle = document.querySelectorAll('.box__title');
+        const boxText = document.querySelectorAll('.box__text');
+
+        maxLengthStr(boxText[1].innerHTML, 55);
+
+        // for (let i = 0; i < boxTitle.length; i++) {
+        //     maxLengthStr(boxTitle[i], 55);
+        //     maxLengthStr(boxText[i], 150);
+        // }
+    }
+
+    function maxLengthStr(str, maxlength) {
+        if (str.length > maxlength) {
+            console.log("YEEEEEEEEEEP!");
+            return str.slice(0, maxlength - 3) + '...';
+        }
+        console.log("NOOOOOOOOOOOO!");
+        return str;
+    }
+
+ boxInFooter();
 }
