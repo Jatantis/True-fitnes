@@ -1,24 +1,3 @@
-// console.log(add(2, 6))
-
-//accordion
-var accItem = document.getElementsByClassName('accordionItem');
-var accHD = document.getElementsByClassName('accordionItemHeading');
-for (i = 0; i < accHD.length; i++) {
-    accHD[i].addEventListener('click', toggleItem, false);
-}
-function toggleItem() {
-    var itemClass = this.parentNode.className;
-    for (i = 0; i < accItem.length; i++) {
-        accItem[i].className = 'accordionItem close';
-    }
-    if (itemClass == 'accordionItem close') {
-        this.parentNode.className = 'accordionItem open';
-    }
-}
-//accordion mobile adaptive
-
-
-
 //accordion adaptive maxWidth
 if (document.querySelector('.accordion-wrapper-desctop') !== null) {
     const accordionDesctop = document.querySelector('.accordion-wrapper-desctop');
@@ -34,27 +13,27 @@ if (document.querySelector('.accordion-wrapper-desctop') !== null) {
 }
 
 
-//accordion mobile
+if (document.querySelector('.accordion-mobile-container') !== null) {
 
-const mobileAccordionItems = document.querySelectorAll('.mobile-accordion-item');
 
-mobileAccordionItems.forEach(function (item) {
-    item.addEventListener('click', function () {
-        if (item.classList.contains('open')) {
-            item.classList.remove('open');
-        } else {
-            mobileAccordionItems.forEach(function (item2) {
-                item2.classList.remove('open')
+    const mobileAccordionItems = document.querySelectorAll('.mobile-accordion-item');
+
+    mobileAccordionItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+            if (item.classList.contains('open')) {
+                item.classList.remove('open');
+            } else {
+                mobileAccordionItems.forEach(function (item2) {
+                    item2.classList.remove('open')
+                }
+                );
+                item.classList.add('open');
             }
-            );
-            item.classList.add('open');
-        }
-    })
+        })
+    }
+    );
+
 }
-);
-
-
-
 // all sliders
 
 if (document.querySelector('.my-slider-first-lvl') !== null) {
@@ -386,18 +365,15 @@ if (document.querySelector('.search-page-five-cart') !== null) {
 
 let sliderСarusel = {
     container: '.my-slider-carusel',
-    items: 3,
-    controls: false,
+    items: 3.3,
     touch: true,
-    preventScrollOnTouch: "auto",
     loop: true,
     mouseDrag: true,
-    swipeAngle: false,
+    swipeAngle: 15,
     speed: 400,
     mode: "carousel",
     autoWidth: true,
-    viewportMax: 'integer'
-
+    controlsContainer: "#customize-controls-carusel",
 }
 
 if (document.querySelector('.my-slider-carusel') !== null) {
@@ -410,7 +386,24 @@ if (document.querySelector('.my-slider-carusel') !== null) {
 // comparison isActive
 
 if (document.querySelector('.cart-elp') !== null) {
+    // if (document.querySelector('.main-comparison-nav') !== null) {
     // tabs in pages comparison
+
+    // const buttonsContainer = document.querySelector('.main-comparison-nav');
+    // const tabs = document.querySelector('.main-comparison');
+
+    // console.log(buttonsContainer);
+
+    // buttonsContainer.addEventListener('click', event => {
+    //     let index = event.target.closest('.main-comparison-nav-item').dataset.value;
+    //     console.log(index);
+    //     console.log(event.target);
+    //     tabs.querySelector('.isActive').classList.remove('isActive');
+    //     tabs.querySelector('.main-comparison-goods--' + index).classList.add('isActive');
+    // });
+
+
+
     let buttonRun = document.querySelector('.button-run');
     let buttonElp = document.querySelector('.button-elp');
     let buttonBike = document.querySelector('.button-bike');
@@ -422,7 +415,7 @@ if (document.querySelector('.cart-elp') !== null) {
     let cartBike = document.querySelector('.cart-bike');
     let cartStep = document.querySelector('.cart-step');
 
-    buttonRun.classList.toggle('isActive');
+    buttonRun.classList.add('isActive');
     cartElp.style.display = 'none';
     cartBike.style.display = 'none';
     cartStep.style.display = 'none';
@@ -437,7 +430,7 @@ if (document.querySelector('.cart-elp') !== null) {
         cartBike.style.display = 'none';
         cartStep.style.display = 'none';
         cartRun.style.display = 'flex';
-        buttonRun.classList.toggle('isActive');
+        buttonRun.classList.add('isActive');
         buttonElp.classList.remove('isActive');
         buttonBike.classList.remove('isActive');
         buttonStep.classList.remove('isActive');
@@ -449,7 +442,7 @@ if (document.querySelector('.cart-elp') !== null) {
         cartStep.style.display = 'none';
         cartRun.style.display = 'none';
         buttonRun.classList.remove('isActive');
-        buttonElp.classList.toggle('isActive');
+        buttonElp.classList.add('isActive');
         buttonBike.classList.remove('isActive');
         buttonStep.classList.remove('isActive');
     }
@@ -460,7 +453,7 @@ if (document.querySelector('.cart-elp') !== null) {
         cartRun.style.display = 'none';
         buttonRun.classList.remove('isActive');
         buttonElp.classList.remove('isActive');
-        buttonBike.classList.toggle('isActive');
+        buttonBike.classList.add('isActive');
         buttonStep.classList.remove('isActive');
     }
 
@@ -472,7 +465,7 @@ if (document.querySelector('.cart-elp') !== null) {
         buttonRun.classList.remove('isActive');
         buttonElp.classList.remove('isActive');
         buttonBike.classList.remove('isActive');
-        buttonStep.classList.toggle('isActive');
+        buttonStep.classList.add('isActive');
     }
 }
 
@@ -487,6 +480,7 @@ const burgerModalClose = document.querySelector('.burger-modal-close');
 const backgroundFon = document.querySelector('.burger-modal');
 const modalNav = document.querySelector('.modal-content');
 const bodyFixed = document.querySelector('body');
+const mainFixed = document.querySelector('main');
 
 burgerModalClose.addEventListener("click", closeModal);
 burgerModalOpen.addEventListener("click", openModal);
@@ -494,21 +488,39 @@ burgerModalOpen.addEventListener("click", openModal);
 function closeModal() {
     backgroundFon.style.opacity = '0';
     backgroundFon.style.zIndex = '-1';
-    modalNav.style.transform = "translateX(50px)";
     modalNav.style.position = "absolute";
-    backgroundFon.style.position = "absolute";
-    bodyFixed.style.overflowY = "auto"
+    modalNav.style.opacity = "-1";
+    bodyFixed.style.paddingRight = "0"
+    bodyFixed.style.zIndex = "auto"
+    // bodyFixed.style.overflow = "auto"
+    // bodyFixed.style.pointerEvents = "auto"
+
+    const body = document.body;
+    const scrollY = body.style.top;
+    body.style.position = '';
+    body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+
 }
 
 function openModal() {
     backgroundFon.style.opacity = '1';
     backgroundFon.style.zIndex = '1';
-    modalNav.style.transform = "translateX(0px)";
     modalNav.style.position = "absolute";
-    backgroundFon.style.position = "fixed";
-    bodyFixed.style.overflowY = "hidden"
-}
+    modalNav.style.opacity = "1";
+    bodyFixed.style.zIndex = "-1"
+    bodyFixed.style.paddingRight = "6px"
+    // bodyFixed.style.overflow = "hidden"
+    // bodyFixed.style.pointerEvents = "none"
 
+    const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+    const body = document.body;
+    body.style.position = 'fixed';
+    body.style.top = `-${scrollY}`;
+}
+window.addEventListener('scroll', () => {
+    document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+});
 
 // modal header sub menu
 const menuCardioButton = document.querySelector('.no-desctop-cardio');
@@ -603,12 +615,12 @@ let b = true;
 function showArrowMenu() {
     if (a) {
         arrowMenu.style.opacity = '1';
-        arrowMenu.style.zIndex = '1';
+        arrowMenu.style.zIndex = '2';
         arrowButton.classList.toggle('showMenu');
         a = false;
         if (b == false) {
             arrowMenu.style.opacity = '1';
-            arrowMenu.style.zIndex = '1';
+            arrowMenu.style.zIndex = '2';
             arrowButtonPower.classList.remove('showMenu');
             b = true;
             a = false;
@@ -625,12 +637,12 @@ function showArrowMenu() {
 function showArrowMenuPower() {
     if (b) {
         arrowMenu.style.opacity = '1';
-        arrowMenu.style.zIndex = '1';
+        arrowMenu.style.zIndex = '2';
         arrowButtonPower.classList.toggle('showMenu');
         b = false;
         if (a == false) {
             arrowMenu.style.opacity = '1';
-            arrowMenu.style.zIndex = '1';
+            arrowMenu.style.zIndex = '2';
             arrowButton.classList.remove('showMenu');
             a = true;
             b = false;
@@ -642,9 +654,6 @@ function showArrowMenuPower() {
         b = true;
     }
 }
-
-// buttonBike.classList.remove('isActive');
-// buttonStep.classList.toggle('isActive');
 
 
 // input form request footer
@@ -659,12 +668,152 @@ const inputFormEmail = document.querySelector('.input-email');
 const inputFormCity = document.querySelector('.input-city');
 const inputFormDesc = document.querySelector('.input-desc');
 
+
+//goods cart button send request
+if (document.querySelector('.button-send-request-button') !== null) {
+    const buttonGoodsCartSendRequest = document.querySelector('.button-send-request-button');
+    const footer = document.querySelector('.footer');
+
+    buttonGoodsCartSendRequest.addEventListener("click", downToBottom);
+
+    function downToBottom() {
+        footer.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+
 // arrow-up
+if (document.querySelector('.arrow-up') !== null) {
+    const bottonToUp = document.querySelector('.arrow-up');
 
-const bottonToUp = document.querySelector('.arrow-up');
+    bottonToUp.addEventListener("click", upToTop);
 
-bottonToUp.addEventListener("click", upToTop);
+    function upToTop() {
+        bodyFixed.scrollIntoView({ behavior: 'smooth' });
+    }
+}
 
-function upToTop() {
-    bodyFixed.scrollIntoView({ behavior: 'smooth' });
+let basicScrollTop = function () {
+    const arrowUp = document.querySelector('.arrow-up');
+    let btnReveal = function () {
+        if (window.scrollY >= 800) {
+            arrowUp.style.opacity = '1';
+        } else {
+            arrowUp.style.opacity = '0';
+        }
+    };
+    window.addEventListener('scroll', btnReveal);
+};
+basicScrollTop();
+
+
+// slider goods page
+if (document.querySelector('.first-prev') !== null) {
+    const buttonFirst = document.querySelector(".first-prev");
+    const buttonSecond = document.querySelector(".second-prev");
+    const buttonLast = document.querySelector(".last-prev");
+
+    const imgFirst = document.querySelector(".first")
+    const imgSecond = document.querySelector(".second")
+    const imgLast = document.querySelector(".last")
+
+    buttonFirst.addEventListener("click", showImgFirst);
+
+    buttonSecond.addEventListener("click", showImgSecond);
+
+    buttonLast.addEventListener("click", showImgLast);
+
+    function showImgFirst() {
+        imgFirst.classList.add("active");
+        imgSecond.classList.remove("active");
+        imgLast.classList.remove("active");
+
+        buttonFirst.classList.add("active-prev");
+        buttonSecond.classList.remove("active-prev");
+        buttonLast.classList.remove("active-prev");
+    }
+    function showImgSecond() {
+        imgFirst.classList.remove("active");
+        imgSecond.classList.add("active");
+        imgLast.classList.remove("active");
+
+        buttonFirst.classList.remove("active-prev");
+        buttonSecond.classList.add("active-prev");
+        buttonLast.classList.remove("active-prev");
+    }
+    function showImgLast() {
+        imgFirst.classList.remove("active");
+        imgSecond.classList.remove("active");
+        imgLast.classList.add("active");
+
+        buttonFirst.classList.remove("active-prev");
+        buttonSecond.classList.remove("active-prev");
+        buttonLast.classList.add("active-prev");
+    }
+
+}
+
+// popup service window
+
+if (document.querySelector('.button-subscribe-button') !== null) {
+
+    const buttonSendService = document.querySelector('.button-subscribe-button');
+    const modalServiceWindowClose = document.querySelector('.window-standart-modal-button');
+    const modalServiceWindow = document.querySelector('.standart-modal');
+
+    // show popup
+    function modalServiceShow() {
+        modalServiceWindow.classList.add('standart-modal-buton');
+    }
+
+    // close popup
+    function modalServiceClose() {
+        modalServiceWindow.classList.remove('standart-modal-buton');
+    }
+
+    // button close popup
+    modalServiceWindowClose.addEventListener("click", modalServiceClose);
+    // button open popup
+    buttonSendService.addEventListener("click", modalServiceShow);
+}
+
+
+
+if (document.querySelector('.accordionWrapper') !== null) {
+    // up to block
+    const accordionWrapperMobile = document.querySelector('.accordionWrapper');
+    const accordionWrapperMobileTwo = document.querySelector('.two');
+    const accordionWrapperMobileThree = document.querySelector('.three');
+
+    accordionWrapperMobileTwo.addEventListener("click", upToAccordionWrapper);
+    accordionWrapperMobileThree.addEventListener("click", upToAccordionWrapper);
+
+    function upToAccordionWrapper() {
+        accordionWrapperMobile.scrollIntoView();
+    };
+
+
+
+    //accordion
+    const accItem = document.getElementsByClassName('accordionItem');
+    const accHD = document.getElementsByClassName('accordionItemHeading');
+
+    for (i = 0; i < accHD.length; i++) {
+        accHD[i].addEventListener('click', toggleItem, false);
+    }
+
+    function toggleItem() {
+
+        for (i = 0; i < accItem.length; i++) {
+            accItem[i].className = 'accordionItem close';
+        }
+
+        let itemClass = this.parentNode.className;
+        
+        if (itemClass == 'accordionItem close') {
+            this.parentNode.className = 'accordionItem open';
+        }
+
+    }
+
 }

@@ -100,7 +100,7 @@
 }
 
 @media (max-width: 767px) {
-  .main-blog-main {
+ .main-blog .main-blog-main {
     @include defaultFlex();
     justify-content: space-between;
     margin-top: 3%;

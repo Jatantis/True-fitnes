@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css" />
+<link href="assets/css/app.css" rel="stylesheet"></head>
+
+<body>
+    <!--START HEADER npm run dev  -->
+    <header class="block-header">
+        <div class="block-header-space-left">
+            <div class="block-header-logo"><a href="/index.html" class="block-header-logo-a"> <svg
+                        class="block-header-logo-svg" width="160" height="50" viewBox="0 0 160 50" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0 31.9054V25.6183L38.8009 0.0524412V8.43889L0 31.9054ZM0 35.4245V38.8009H38.8009V27.3177L0 35.4245ZM0 0H21.4195L0 18.6893V0Z"
+                            fill="#2FB4C6" />
+                        <path
+                            d="M2.14013 44.786H0V44.2957H4.92405V44.786H2.78392V49.6578H2.14013V44.786ZM17.5928 49.6578L16.2008 47.9344C16.0442 47.9495 15.8818 47.9576 15.7137 47.9576H14.0781V49.6578H13.4343V44.2957H15.7137C16.4908 44.2957 17.0998 44.4588 17.5405 44.786C17.9814 45.1126 18.2017 45.5618 18.2017 46.1342C18.2017 46.5527 18.08 46.9077 17.8363 47.1991C17.5986 47.4847 17.2564 47.6916 16.8098 47.8194L18.2975 49.6578H17.5928ZM15.6963 47.4748C16.2994 47.4748 16.7605 47.3575 17.0795 47.1222C17.3985 46.8875 17.5579 46.5579 17.5579 46.1342C17.5579 45.7 17.3985 45.3682 17.0795 45.1381C16.7605 44.9034 16.2994 44.786 15.6963 44.786H14.0781V47.4748H15.6963ZM29.6563 49.704C28.8675 49.704 28.2528 49.5046 27.812 49.1063C27.3711 48.708 27.1508 48.1281 27.1508 47.3673V44.2957H27.7945V47.3442C27.7945 47.9674 27.954 48.4322 28.273 48.7386C28.5921 49.045 29.0532 49.1982 29.6563 49.1982C30.2653 49.1982 30.7292 49.045 31.0482 48.7386C31.3673 48.4322 31.5267 47.9674 31.5267 47.3442V44.2957H32.1531V47.3673C32.1531 48.1281 31.9328 48.708 31.492 49.1063C31.057 49.5046 30.4451 49.704 29.6563 49.704ZM45.8813 49.1676V49.6578H41.5749V44.2957H45.7508V44.786H42.2187V46.6932H45.368V47.1759H42.2187V49.1676H45.8813ZM66.314 49.704C65.8617 49.704 65.4265 49.6399 65.009 49.5121C64.5972 49.3843 64.2782 49.2161 64.052 49.0068L64.3043 48.5704C64.5248 48.764 64.8175 48.9224 65.1829 49.045C65.5486 49.1624 65.9254 49.2213 66.314 49.2213C66.8589 49.2213 67.2679 49.1346 67.5403 48.9606C67.8134 48.782 67.9493 48.5524 67.9493 48.2715C67.9493 48.057 67.8744 47.8859 67.7235 47.7581C67.5784 47.6303 67.3985 47.5332 67.1838 47.4667C66.9692 47.3956 66.6705 47.3187 66.2878 47.2372C65.8295 47.1349 65.4645 47.0378 65.1915 46.9458C64.9192 46.8487 64.6843 46.7036 64.487 46.5094C64.2956 46.3157 64.1999 46.0521 64.1999 45.7202C64.1999 45.4497 64.2812 45.2046 64.4435 44.9849C64.606 44.7606 64.8554 44.5813 65.1915 44.449C65.5282 44.316 65.9457 44.2495 66.4447 44.2495C66.7926 44.2495 67.132 44.2929 67.4622 44.3796C67.799 44.4617 68.0885 44.5767 68.332 44.7247L68.1147 45.1762C67.8593 45.0282 67.5869 44.9184 67.2968 44.8473C67.0072 44.7704 66.723 44.7322 66.4447 44.7322C65.9109 44.7322 65.5079 44.8242 65.2354 45.008C64.9685 45.1866 64.835 45.419 64.835 45.7052C64.835 45.9197 64.9076 46.0931 65.0525 46.2261C65.2033 46.3539 65.3891 46.4533 65.609 46.525C65.8355 46.5915 66.1368 46.6649 66.5142 46.747C66.9606 46.8441 67.3204 46.9407 67.5928 47.0378C67.8712 47.1297 68.1062 47.2731 68.2972 47.4667C68.4889 47.6558 68.5847 47.9136 68.5847 48.2408C68.5847 48.5114 68.5007 48.7594 68.332 48.9837C68.1699 49.2034 67.9178 49.3797 67.5751 49.5121C67.2331 49.6399 66.8129 49.704 66.314 49.704ZM79.9226 49.704C79.1336 49.704 78.5191 49.5046 78.0779 49.1063C77.6375 48.708 77.4169 48.1281 77.4169 47.3673V44.2957H78.0609V47.3442C78.0609 47.9674 78.2204 48.4322 78.5394 48.7386C78.8578 49.045 79.3193 49.1982 79.9226 49.1982C80.5312 49.1982 80.9953 49.045 81.3143 48.7386C81.6334 48.4322 81.7929 47.9674 81.7929 47.3442V44.2957H82.4192V47.3673C82.4192 48.1281 82.1986 48.708 81.7581 49.1063C81.3229 49.5046 80.711 49.704 79.9226 49.704ZM94.1201 44.2957C94.8973 44.2957 95.5065 44.4588 95.947 44.786C96.3882 45.1126 96.6081 45.5618 96.6081 46.1342C96.6081 46.7059 96.3882 47.1557 95.947 47.4823C95.5065 47.8044 94.8973 47.9651 94.1201 47.9651H92.4848V49.6578H91.8408V44.2957H94.1201ZM94.103 47.4667C94.7063 47.4667 95.1671 47.3523 95.4862 47.1222C95.8052 46.8875 95.9648 46.5579 95.9648 46.1342C95.9648 45.7 95.8052 45.3682 95.4862 45.1381C95.1671 44.9034 94.7063 44.786 94.103 44.786H92.4848V47.4667H94.103ZM107.761 44.2957C108.539 44.2957 109.148 44.4588 109.588 44.786C110.029 45.1126 110.25 45.5618 110.25 46.1342C110.25 46.7059 110.029 47.1557 109.588 47.4823C109.148 47.8044 108.539 47.9651 107.761 47.9651H106.126V49.6578H105.482V44.2957H107.761ZM107.744 47.4667C108.347 47.4667 108.809 47.3523 109.128 47.1222C109.446 46.8875 109.606 46.5579 109.606 46.1342C109.606 45.7 109.446 45.3682 109.128 45.1381C108.809 44.9034 108.347 44.786 107.744 44.786H106.126V47.4667H107.744ZM119.124 44.2957H119.767V49.1676H123.177V49.6578H119.124V44.2957ZM131.729 44.2957H132.372V49.6578H131.729V44.2957ZM146.141 49.1676V49.6578H141.836V44.2957H146.011V44.786H142.479V46.6932H145.629V47.1759H142.479V49.1676H146.141ZM159.295 49.6578L157.903 47.9344C157.746 47.9495 157.584 47.9576 157.416 47.9576H155.78V49.6578H155.137V44.2957H157.416C158.193 44.2957 158.802 44.4588 159.243 44.786C159.684 45.1126 159.904 45.5618 159.904 46.1342C159.904 46.5527 159.782 46.9077 159.539 47.1991C159.301 47.4847 158.959 47.6916 158.512 47.8194L160 49.6578H159.295ZM157.398 47.4748C158.002 47.4748 158.463 47.3575 158.782 47.1222C159.101 46.8875 159.26 46.5579 159.26 46.1342C159.26 45.7 159.101 45.3682 158.782 45.1381C158.463 44.9034 158.002 44.786 157.398 44.786H155.78V47.4748H157.398Z"
+                            fill="black" />
+                        <path
+                            d="M51.2862 3.22436V7.42555H59.1358V10.3774H51.2862V16.1681H47.3613V0.272476H60.1776V3.22436H51.2862ZM62.8347 0.272476H66.7595V16.1681H62.8347V0.272476ZM74.2973 3.26978H68.8703V0.272476H83.6491V3.26978H78.2222V16.1681H74.2973V3.26978ZM101.315 0.272476V16.1681H98.0926L89.6373 6.51729V16.1681H85.7608V0.272476H89.0074L97.4385 9.92332V0.272476H101.315ZM118.458 13.2162V16.1681H105.327V0.272476H118.143V3.22436H109.228V6.6758H117.102V9.53687H109.228V13.2162H118.458ZM127.154 16.4406C125.813 16.4406 124.513 16.2735 123.253 15.9411C122.009 15.5923 121.008 15.1459 120.249 14.6009L121.581 11.8307C122.308 12.3302 123.172 12.7312 124.174 13.0346C125.175 13.337 126.176 13.4887 127.178 13.4887C128.292 13.4887 129.116 13.337 129.649 13.0346C130.182 12.7167 130.449 12.3003 130.449 11.7853C130.449 11.4065 130.287 11.0964 129.964 10.8539C129.657 10.5968 129.253 10.392 128.753 10.2412C128.268 10.0895 127.606 9.92331 126.766 9.74165C125.474 9.45375 124.416 9.16584 123.592 8.87879C122.769 8.59088 122.058 8.12904 121.46 7.49325C120.879 6.85746 120.588 6.01003 120.588 4.95009C120.588 4.02639 120.855 3.19351 121.388 2.45233C121.921 1.69486 122.72 1.09763 123.786 0.658064C124.868 0.219351 126.185 0 127.735 0C128.817 0 129.875 0.120817 130.909 0.363308C131.943 0.604943 132.847 0.953681 133.622 1.40782L132.411 4.20034C130.844 3.36832 129.278 2.95188 127.711 2.95188C126.613 2.95188 125.797 3.11812 125.264 3.45144C124.747 3.7839 124.489 4.22346 124.489 4.76843C124.489 5.31339 124.788 5.72212 125.385 5.9946C125.999 6.25166 126.927 6.50958 128.171 6.76663C129.463 7.05454 130.521 7.34245 131.345 7.6295C132.169 7.9174 132.871 8.37153 133.453 8.9919C134.05 9.61312 134.349 10.4528 134.349 11.5128C134.349 12.4211 134.075 13.2539 133.525 14.0105C132.992 14.7526 132.185 15.343 131.103 15.7817C130.021 16.2212 128.704 16.4406 127.154 16.4406ZM142.603 16.4406C141.263 16.4406 139.962 16.2735 138.703 15.9411C137.459 15.5923 136.458 15.1459 135.699 14.6009L137.031 11.8307C137.758 12.3302 138.622 12.7312 139.623 13.0346C140.625 13.337 141.626 13.4887 142.628 13.4887C143.742 13.4887 144.566 13.337 145.099 13.0346C145.632 12.7167 145.898 12.3003 145.898 11.7853C145.898 11.4065 145.737 11.0964 145.414 10.8539C145.107 10.5968 144.703 10.392 144.203 10.2412C143.718 10.0895 143.056 9.92331 142.216 9.74165C140.924 9.45375 139.866 9.16584 139.042 8.87879C138.218 8.59088 137.508 8.12904 136.91 7.49325C136.329 6.85746 136.038 6.01003 136.038 4.95009C136.038 4.02639 136.304 3.19351 136.837 2.45233C137.37 1.69486 138.17 1.09763 139.236 0.658064C140.318 0.219351 141.634 0 143.185 0C144.267 0 145.324 0.120817 146.359 0.363308C147.392 0.604943 148.297 0.953681 149.072 1.40782L147.861 4.20034C146.294 3.36832 144.728 2.95188 143.161 2.95188C142.062 2.95188 141.247 3.11812 140.714 3.45144C140.196 3.7839 139.939 4.22346 139.939 4.76843C139.939 5.31339 140.237 5.72212 140.834 5.9946C141.449 6.25166 142.377 6.50958 143.621 6.76663C144.913 7.05454 145.971 7.34245 146.795 7.6295C147.619 7.9174 148.321 8.37153 148.903 8.9919C149.5 9.61312 149.799 10.4528 149.799 11.5128C149.799 12.4211 149.525 13.2539 148.975 14.0105C148.442 14.7526 147.634 15.343 146.553 15.7817C145.47 16.2212 144.154 16.4406 142.603 16.4406Z"
+                            fill="#222222" />
+                        <path d="M71.4954 22.249H67.5957V38.1447H71.4954V22.249Z" fill="#222222" />
+                        <path
+                            d="M84.307 38.1447L91.6005 22.249H87.7244L82.5251 33.6025L77.3985 22.249H73.1864L80.4554 38.1447H84.307Z"
+                            fill="#222222" />
+                        <path d="M96.907 22.249H93.0073V38.1447H96.907V22.249Z" fill="#222222" />
+                        <path
+                            d="M102.566 37.9176C103.818 38.2501 105.11 38.4172 106.442 38.4172C107.982 38.4172 109.29 38.1978 110.365 37.7582C111.44 37.3195 112.242 36.7292 112.772 35.9871C113.318 35.2305 113.591 34.3976 113.591 33.4893C113.591 32.4294 113.294 31.5897 112.7 30.9685C112.122 30.3481 111.424 29.894 110.606 29.6061C109.788 29.319 108.736 29.0311 107.453 28.7432C106.217 28.4861 105.294 28.2282 104.685 27.9712C104.091 27.6987 103.794 27.29 103.794 26.745C103.794 26.2 104.051 25.7605 104.564 25.428C105.093 25.0947 105.904 24.9284 106.995 24.9284C108.552 24.9284 110.108 25.3449 111.665 26.1769L112.868 23.3844C112.098 22.9302 111.2 22.5815 110.173 22.3399C109.145 22.0974 108.095 21.9766 107.019 21.9766C105.478 21.9766 104.171 22.1959 103.095 22.6346C102.036 23.0742 101.243 23.6714 100.713 24.4289C100.183 25.1701 99.9184 26.003 99.9184 26.9267C99.9184 27.9866 100.207 28.834 100.785 29.4698C101.379 30.1056 102.084 30.5674 102.903 30.8554C103.722 31.1424 104.773 31.4303 106.057 31.7182C106.89 31.8999 107.549 32.0661 108.03 32.2178C108.528 32.3686 108.928 32.5734 109.234 32.8304C109.554 33.0729 109.715 33.3831 109.715 33.7618C109.715 34.2768 109.451 34.6932 108.921 35.0111C108.392 35.3136 107.573 35.4653 106.465 35.4653C105.471 35.4653 104.476 35.3136 103.481 35.0111C102.486 34.7078 101.628 34.3068 100.906 33.8073L99.5815 36.5775C100.335 37.1224 101.331 37.5689 102.566 37.9176Z"
+                            fill="#222222" />
+                        <path d="M120.154 22.249H116.255V38.1447H120.154V22.249Z" fill="#222222" />
+                        <path
+                            d="M159.916 38.1447V22.249H156.065V31.8999L147.688 22.249H144.462V38.1447H148.314V28.4939L156.715 38.1447H159.916Z"
+                            fill="#222222" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M132.23 38.8009C130.475 38.8009 128.89 38.4229 127.474 37.6658C126.073 36.9097 124.97 35.8712 124.166 34.5512C123.377 33.2157 122.982 31.7189 122.982 30.0609C122.982 28.4038 123.377 26.9143 124.166 25.5943C124.97 24.2588 126.073 23.213 127.474 22.456C128.89 21.6998 130.475 21.3218 132.23 21.3218C133.984 21.3218 135.562 21.6998 136.962 22.456C138.363 23.213 139.466 24.2588 140.27 25.5943C141.076 26.9143 141.477 28.4038 141.477 30.0609C141.477 31.7189 141.076 33.2157 140.27 34.5512C139.466 35.8712 138.363 36.9097 136.962 37.6658C135.562 38.4229 133.984 38.8009 132.23 38.8009ZM132.233 35.4684C133.231 35.4684 134.132 35.2425 134.938 34.7924C135.742 34.3251 136.37 33.681 136.821 32.8602C137.288 32.0394 137.521 31.1066 137.521 30.0599C137.521 29.014 137.288 28.0803 136.821 27.2595C136.37 26.4387 135.742 25.8028 134.938 25.3519C134.132 24.8854 133.231 24.6522 132.233 24.6522C131.235 24.6522 130.333 24.8854 129.529 25.3519C128.724 25.8028 128.088 26.4387 127.621 27.2595C127.171 28.0803 126.946 29.014 126.946 30.0599C126.946 31.1066 127.171 32.0394 127.621 32.8602C128.088 33.681 128.724 34.3251 129.529 34.7924C130.333 35.2425 131.235 35.4684 132.233 35.4684Z"
+                            fill="#222222" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M47.3594 21.6116H55.0381C56.8728 21.6116 58.4908 21.9651 59.891 22.6738C61.3075 23.3652 62.4026 24.3473 63.1751 25.619C63.964 26.8908 64.3584 28.3711 64.3584 30.061C64.3584 31.7509 63.964 33.2322 63.1751 34.503C62.4026 35.7747 61.3075 36.765 59.891 37.4728C58.4908 38.1652 56.8728 38.5114 55.0381 38.5114H47.3594V21.6116ZM54.8463 35.2995C56.5362 35.2995 57.8799 34.8331 58.8784 33.8993C59.8923 32.9491 60.3997 31.6701 60.3997 30.0604C60.3997 28.4516 59.8923 27.1798 58.8784 26.2461C57.8799 25.2959 56.5362 24.8213 54.8463 24.8213H51.2725V35.2995H54.8463Z"
+                            fill="#222222" />
+                    </svg></a>
+            </div>
+            <nav class="block-header-menu">
+
+                <a href="/cardio.html" class="block-header-menu-a header-arrow-menu">
+                    Кардио<svg class="block-header-menu-logo-svg" width="8" height="5" viewBox="0 0 8 5" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.00087 0L3.39844 1.28244L8.0005 4.164V2.49031L4.00087 0Z" fill="#AAAAAA" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3.99913 0L4.60156 1.28244L-0.000504971 4.164V2.49031L3.99913 0Z" fill="#AAAAAA" />
+                    </svg>
+                </a>
+                <a href="/power.html" class="block-header-menu-a header-arrow-menu-power">
+                    Силовые<svg class="block-header-menu-logo-svg" width="8" height="5" viewBox="0 0 8 5" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.00087 0L3.39844 1.28244L8.0005 4.164V2.49031L4.00087 0Z" fill="#AAAAAA" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3.99913 0L4.60156 1.28244L-0.000504971 4.164V2.49031L3.99913 0Z" fill="#AAAAAA" />
+                    </svg>
+                </a>
+                <a href="/technology.html" class="block-header-menu-a">Растяжка</a>
+                <a href="/technology.html" class="block-header-menu-a">Групповые</a>
+                <a href="/technology.html" class="block-header-menu-a">Технологии</a>
+            </nav>
+        </div>
+        <div class="block-header-space-right">
+            <svg class="block-header-number-svg" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M14.6144 11.064L12.7496 9.19916C12.2355 8.68506 11.3989 8.68506 10.8848 9.19916L10.0372 10.0468C9.64769 10.4363 9.01392 10.4362 8.62457 10.0469L4.95058 6.3698C4.56018 5.9794 4.56012 5.34753 4.95058 4.95707C5.08711 4.82055 5.47915 4.42851 5.79821 4.10945C6.31008 3.59761 6.31722 2.76364 5.79771 2.24418L3.93341 0.38574C3.41928 -0.128355 2.58273 -0.128355 2.06999 0.384392C1.6863 0.764741 1.56254 0.887442 1.3905 1.05799C-0.463486 2.91195 -0.463486 5.92857 1.39041 7.78247L7.21173 13.6068C9.07005 15.4652 12.0778 15.4653 13.9363 13.6068L14.6144 12.9287C15.1285 12.4146 15.1285 11.5781 14.6144 11.064ZM2.69023 1.00733C2.86159 0.835965 3.14039 0.835935 3.31232 1.0078L5.17662 2.86624C5.34839 3.03802 5.34839 3.31603 5.17662 3.48783L4.86579 3.79862L2.38101 1.31385L2.69023 1.00733ZM7.83343 12.9853L2.01209 7.16091C0.577712 5.72653 0.498871 3.47424 1.76962 1.94566L4.24719 4.42323C3.59619 5.16122 3.62332 6.28578 4.32884 6.99131L8.00272 10.6683C8.00275 10.6683 8.00281 10.6683 8.00284 10.6684C8.7076 11.3732 9.8321 11.4021 10.571 10.7502L13.0486 13.2278C11.5249 14.4964 9.27769 14.4296 7.83343 12.9853ZM13.9928 12.3071L13.682 12.618L11.1956 10.1315L11.5064 9.82075C11.6778 9.64938 11.9566 9.64935 12.128 9.82075L13.9928 11.6855C14.1642 11.8569 14.1642 12.1358 13.9928 12.3071Z"
+                    fill="#222222" />
+            </svg>
+            <div class="block-header-number">
+                <a class="block-header-number-a" href="tel:+84597405100"> 8 (495) 740-51-00</a></div>
+            <div class="block-header-burger-menu burger-modal-open"><svg class="burger-svg" width="40" height="21"
+                    viewBox="0 0 40 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.9">
+                        <rect width="40" height="3" fill="#222222" />
+                        <rect x="8" y="9" width="32" height="3" fill="#222222" />
+                        <rect y="18" width="40" height="3" fill="#222222" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div class="header-arrow-menu-nav">
+            <a href="/treadmills.html" class="header-arrow-menu-nav-a">Наборные</a>
+            <a href="/treadmills.html" class="header-arrow-menu-nav-a">Функциональные</a>
+            <a href="/treadmills.html" class="header-arrow-menu-nav-a">Композитные</a>
+            <a href="/treadmills.html" class="header-arrow-menu-nav-a">Рейки и скобы</a>
+            <a href="/treadmills.html" class="header-arrow-menu-nav-a">Мульти-станции</a>
+            <a href="/treadmills.html" class="header-arrow-menu-nav-a">Групповые системы</a>
+        </div>
+    </header>
+
+    <!--END HEADER-->
+    <!-- main -->
+    <main class="main-comparison">
+        <div class="breadcrumbs">
+            <a href="#">главная //</a>
+            <a href="#">кардио //</a>
+            <p>беговые</p>
+        </div>
+
+        <h1 class="header-h1">сравнение</h1>
+
+        <div class="main-comparison-instruction">выберите не более 4х товаров</div>
+        <!-- run start -->
+        <div class="main-comparison-goods--1 cart-run">
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox1" id="id1" name="check1" />
+                        <label for="id1"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div>
+                <label for="id1">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL run</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox2" id="id2" name="check2" />
+                        <label for="id2"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="id2">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL run</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox3" id="id3" name="check3" />
+                        <label for="id3"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="id3">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL run</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox4" id="id4" name="check4" />
+                        <label for="id4"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div> <label for="id4"><img src="./assets/img/comparison/goods-run.png" alt=""
+                        class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL run</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox1" id="id5" name="check1" />
+                        <label for="id5"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="id5">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL run</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox2" id="id6" name="check2" />
+                        <label for="id6"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="id6">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL run</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox3" id="id7" name="check3" />
+                        <label for="id7"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="id7">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL run</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox4" id="id8" name="check4" />
+                        <label for="id8"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div> <label for="id8"><img src="./assets/img/comparison/goods-run.png" alt=""
+                        class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL run</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox1" id="id9" name="check1" />
+                        <label for="id9"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="id9">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL run</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox2" id="id10" name="check2" />
+                        <label for="id10"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="id10">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL run</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox3" id="id11" name="check3" />
+                        <label for="id11"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="id11">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL run</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox4" id="id12" name="check4" />
+                        <label for="id12"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="id12"> <img src="./assets/img/comparison/goods-run.png" alt=""
+                        class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL run</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox1" id="id13" name="check1" />
+                        <label for="id13"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="id13">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL run</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox2" id="id14" name="check2" />
+                        <label for="id14"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="id14">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL run</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox3" id="id15" name="check3" />
+                        <label for="id15"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="id15">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL run</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox4" id="id16" name="check4" />
+                        <label for="id16"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="id16"> <img src="./assets/img/comparison/goods-run.png" alt=""
+                        class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL run</p>
+                </label>
+            </div>
+        </div>
+        <!-- run end -->
+
+
+
+
+        <!-- elp start -->
+        <div class="main-comparison-goods--2 cart-elp">
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox1" id="elpId1" name="check1" />
+                        <label for="elpId1"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="elpId1">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL elp</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox2" id="elpId2" name="check2" />
+                        <label for="elpId2"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="elpId2">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL elp</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox3" id="elpId3" name="check3" />
+                        <label for="elpId3"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="elpId3">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL elp</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox4" id="elpId4" name="check4" />
+                        <label for="elpId4"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div> <label for="elpId4"><img src="./assets/img/comparison/goods-run.png" alt=""
+                        class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL elp</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox1" id="elpId5" name="check1" />
+                        <label for="elpId5"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="elpId5">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL elp</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox2" id="elpId6" name="check2" />
+                        <label for="elpId6"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="elpId6">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL elp</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox3" id="elpId7" name="check3" />
+                        <label for="elpId7"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="elpId7">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL elp</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox4" id="elpId8" name="check4" />
+                        <label for="elpId8"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="elpId8"> <img src="./assets/img/comparison/goods-run.png" alt=""
+                        class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL elp</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox1" id="elpId9" name="check1" />
+                        <label for="elpId9"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="elpId9">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL elp</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox2" id="elpId10" name="check2" />
+                        <label for="elpId10"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="elpId10">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL elp</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox3" id="elpId11" name="check3" />
+                        <label for="elpId11"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="elpId11">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL elp</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox4" id="elpId12" name="check4" />
+                        <label for="elpId12"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div> <label for="elpId12"><img src="./assets/img/comparison/goods-run.png" alt=""
+                        class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL elp</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox1" id="elpId13" name="check1" />
+                        <label for="elpId13"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="elpId13">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL elp</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox2" id="elpId14" name="check2" />
+                        <label for="elpId14"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="elpId14">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL elp</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox3" id="elpId15" name="check3" />
+                        <label for="elpId15"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="elpId15">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL elp</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox4" id="elpId16" name="check4" />
+                        <label for="elpId16"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div> <label for="elpId16"><img src="./assets/img/comparison/goods-run.png" alt=""
+                        class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL elp</p>
+                </label>
+            </div>
+        </div>
+        <!-- elp end -->
+
+        <!-- bike start -->
+        <div class="main-comparison-goods--3 cart-bike">
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox1" id="bikeId1" name="check1" />
+                        <label for="bikeId1"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="bikeId1">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL bike</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox2" id="bikeId2" name="check2" />
+                        <label for="bikeId2"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="bikeId2">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL bike</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox3" id="bikeId3" name="check3" />
+                        <label for="bikeId3"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="bikeId3">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL bike</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox4" id="bikeId4" name="check4" />
+                        <label for="bikeId4"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div> <label for="bikeId4"><img src="./assets/img/comparison/goods-run.png" alt=""
+                        class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL bike</p>
+                </label>
+            </div>
+        </div>
+        <!-- bike end -->
+
+        <!-- step start -->
+        <div class="main-comparison-goods--4 cart-step">
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox1" id="stepId1" name="check1" />
+                        <label for="stepId1"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="stepId1">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL step</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox2" id="stepId2" name="check2" />
+                        <label for="stepId2"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="stepId2">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL step</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox3" id="stepId3" name="check3" />
+                        <label for="stepId3"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div><label for="stepId3">
+                    <img src="./assets/img/comparison/goods-run.png" alt="" class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL step</p>
+                </label>
+            </div>
+            <div class="main-comparison-goods-target">
+                <div class="main-comparison-goods-target-check">
+                    <!-- .squaredOne -->
+                    <div class="squaredOne">
+                        <input type="checkbox" value="checkbox4" id="stepId4" name="check4" />
+                        <label for="stepId4"></label>
+                    </div>
+                    <!-- end .squaredOne -->
+                </div> <label for="stepId4"><img src="./assets/img/comparison/goods-run.png" alt=""
+                        class="main-comparison-goods-target-img">
+                    <p class="main-comparison-goods-target-p">900 TREADMILL step</p>
+                </label>
+            </div>
+        </div>
+        <!-- step end -->
+        <div class="main-comparison-nav">
+            <div class="main-comparison-nav-item button-run">
+                <p class="main-comparison-nav-item-p" data-value="1">Беговые дорожки</p>
+            </div>
+            <div class="main-comparison-nav-item button-elp">
+                <p class="main-comparison-nav-item-p" data-value="2">Элиптические тренажеры</p>
+            </div>
+            <div class="main-comparison-nav-item button-bike">
+                <p class="main-comparison-nav-item-p" data-value="3">Велотренажёры</p>
+            </div>
+            <div class="main-comparison-nav-item button-step">
+                <p class="main-comparison-nav-item-p" data-value="4">Степперы</p>
+            </div>
+            <div class="main-comparison-nav-button">
+                <div class="button-subscribe">
+                    <button class="button-subscribe-button run-item">сравнить</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!--START modal-button-->
+        <div class="modal-button">
+            <div class="modal-button-comparison">
+            </div>
+            <div class="hide-arrow arrow-up arrow-comparison">
+                <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.20688 0.744751L4.45557 2.42557L10.1951 6.20231V4.0087L5.20688 0.744751Z" fill="white" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.20571 0.744751L5.95703 2.42557L0.21772 6.20215V4.00855L5.20571 0.744751Z" fill="white" />
+                </svg>
+            </div>
+        </div>
+        <!--END modal-button-->
+    </main>
+    <!-- end main -->
+    <!--START FOOTER-->
+    <!--START MODAL-->
+    <div class="modal burger-modal">
+        <div id="scrollbar-modal" class="modal-content">
+            <div class="test-first">
+                <div class="posotoin-button-close">
+                    <div class="button-close burger-modal-close"><svg class="burger-menu-close" width="31" height="31"
+                            viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2.12109" width="40" height="3" transform="rotate(45 2.12109 0)" fill="#222222" />
+                            <rect width="40" height="3"
+                                transform="matrix(-0.707107 0.707107 0.707107 0.707107 28.2842 0)" fill="#222222" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="modal-search">
+                    <form class="search-container">
+                        <input type="text" class="modal-search-input" id="search-bar" placeholder="">
+                        <a href="/search.html"><img class="search-icon" src="./assets/img/svg/sprite/search.svg"></a>
+                    </form>
+                </div>
+            </div>
+            <nav class="modal-nav">
+                <div class="modal-nav-no-desctop-menu">
+                    <div class="modal-nav-no-desctop-menu-wrapper">
+                        <a href="/cardio.html" class="modal-nav-no-desctop-menu-a no-desctop-cardio">кардио<svg
+                                class="modal-nav-no-desctop-menu-svg" width="20" height="11" viewBox="0 0 20 11"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.8">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M10.0008 10.4102L8.49475 7.20406L20 0.000133514V4.18436L10.0008 10.4102Z"
+                                        fill="#AAAAAA" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.99918 10.4102L11.5052 7.20406L0.000110626 0.000181198V4.18441L9.99918 10.4102Z"
+                                        fill="#AAAAAA" />
+                                </g>
+                            </svg>
+                        </a>
+                        <div class="modal-nav-no-desctop-menu-sub-menu sum-menu-cardio">
+                            <a href="" class="modal-nav-no-desctop-menu-sub-menu-a">Беговые дорожки</a>
+                            <a href="" class="modal-nav-no-desctop-menu-sub-menu-a">Эллиптические</a>
+                            <a href="" class="modal-nav-no-desctop-menu-sub-menu-a">Велосипеды</a>
+                            <a href="" class="modal-nav-no-desctop-menu-sub-menu-a">Альпинистские</a>
+                        </div>
+                    </div>
+                    <div class="modal-nav-no-desctop-menu-wrapper">
+                        <a href="/power.html" class="modal-nav-no-desctop-menu-a no-desctop-power">силовые<svg
+                                class="modal-nav-no-desctop-menu-svg-power" width="20" height="11" viewBox="0 0 20 11"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.8">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M10.0008 10.4102L8.49475 7.20406L20 0.000133514V4.18436L10.0008 10.4102Z"
+                                        fill="#AAAAAA" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.99918 10.4102L11.5052 7.20406L0.000110626 0.000181198V4.18441L9.99918 10.4102Z"
+                                        fill="#AAAAAA" />
+                                </g>
+                            </svg>
+                        </a>
+                        <div class="modal-nav-no-desctop-menu-sub-menu sum-menu-power">
+                            <a href="" class="modal-nav-no-desctop-menu-sub-menu-a">Беговые дорожки</a>
+                            <a href="" class="modal-nav-no-desctop-menu-sub-menu-a">Эллиптические</a>
+                            <a href="" class="modal-nav-no-desctop-menu-sub-menu-a">Велосипеды</a>
+                            <a href="" class="modal-nav-no-desctop-menu-sub-menu-a">Альпинистские</a>
+                        </div>
+                    </div>
+                    <a href="" class="modal-nav-no-desctop-menu-a">растяжка</a>
+                    <a href="" class="modal-nav-no-desctop-menu-a">групповые</a>
+                    <a href="" class="modal-nav-no-desctop-menu-a">технологии</a>
+                </div>
+                <div class="test">
+                    <div class="modal-nav-menu">
+                        <a href="/about.html" class="modal-nav-menu-a">о компании</a><br />
+                        <a href="/service.html" class="modal-nav-menu-a">сервис</a><br />
+                        <a href="/project.html" class="modal-nav-menu-a">проекты</a><br />
+                        <a href="/blog.html" class="modal-nav-menu-a">блог</a><br />
+                        <a href="/contact.html" class="modal-nav-menu-a">контакты</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--END MODAL-->
+    <footer class="footer">
+        <div class="footer-background">
+            <div class="form-request">
+                <p class="form-request-title">оставьте заявку</p>
+                <form class="footer-form">
+
+                    <div class="footer-form__row">
+                        <input type="text" placeholder="телефон">
+                    </div>
+                    <div class="footer-form__row">
+                        <input type="text" placeholder="почта">
+                    </div>
+                    <div class="footer-form__row">
+                        <input type="text" placeholder="город">
+                    </div>
+                    <div class="footer-form__row">
+                        <input type="text" placeholder="описание проекта">
+                    </div>
+                    <div class="text-political-confidence">
+                        <p>Нажимая на кнопку, вы даете согласие на обработку персональных данных
+                            и соглашаетесь с политикой конфиденциальности.</p>
+                    </div>
+                    <div class="button-send">
+                        <button class="">ОТПРАВИТЬ</button>
+                    </div>
+                </form>
+            </div>
+            <div class="view-blog">
+                <div class="view-blog-box">
+                    <div class="title-blog">читайте в блоге</div>
+
+                    <a class="view-blog-box-a" href="/blog-page.html">
+                        <div class="box-box">
+                            <div class="box__title">Комплекс тренировки на беговой дорожке TRUE ALPINE RUNNER</div>
+                            <div class="box__text">TRUE Alpine Runner — единственная беговая дорожка с углом наклона
+                                30%.
+                                Исследования показали,
+                                что тренировка на беговой...</div>
+                        </div>
+                    </a>
+                    <div class="view-box-space"></div>
+                    <a class="view-blog-box-a" href="/blog-page.html">
+                        <div class="box-box">
+                            <div class="box-padding">
+                                <div class="box__title">Дизайн в нашей жизни</div>
+                                <div class="box__text">Грамотно выполненный дизайн интерьера фитнес клуба влияет на
+                                    привлекательность заведения для клиентов ,
+                                    на коммерческую отдачу всего проекта в целом.</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <div class="footer-line">
+        <div class="line-left">
+            <span class="line-left-first">Cогласие на обработку персональных данных</span>
+            <span class="line-left-second">Политика обработки персональных данных</span>
+        </div>
+        <div class="line-right">
+            <span class="line-right-first">© Fitdivision 2000 -2019</span>
+            <span class="line-right-second">Разработано - asterica</span>
+        </div>
+    </div>
+    <!--END FOOTER-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+
+<script type="text/javascript" src="assets/js/app.js"></script></body>
+
+
+</html>

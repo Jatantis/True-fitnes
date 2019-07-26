@@ -1,0 +1,64 @@
+
+function showOverlay(){
+
+    let overlay = document.querySelector('.modal-overlay');
+
+    overlay.classList.toggle('active')
+
+    overlay.addEventListener('click' , function() {
+        overlay.classList.remove('active')
+    })
+}
+
+let modalIcon = document.querySelector('.burger-modal-open');
+
+modalIcon.addEventListener('click', showOverlay)
+ 
+
+
+ 
+
+.is-active{
+  opacity: 1;
+    z-index: 1;
+    position: fixed;
+}
+
+.modal-overlay{
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  transition: 0.2s linear;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.377);
+  opacity: 0;
+  top: 0;
+  left: 0;
+   &.active{
+    z-index: 8;
+    opacity: 1;
+     transform: translateY(-50%);
+  }
+}
+
+// КЛАССЫ АКТИВНОЙ МОДАЛКИ
+.modal-item {
+  z-index: 5;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  transition: 0.2s linear;
+  transform: translateY(-25%);
+  width: 300px;
+  height: 250px;
+  background: rgba(0, 0, 0,1);
+  z-index: -1;
+  opacity: 0;
+
+  &.active{
+    z-index: 10;
+    opacity: 1;
+     transform: translateY(-50%);
+  }
+}

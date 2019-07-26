@@ -15,7 +15,9 @@
 .fisedPage {
   position: fixed;
 }
-
+.burger-modal{
+  position: fixed;
+}
 .modal {
   overflow-x: hidden;
   display: flex;
@@ -57,7 +59,6 @@
     padding-left: 6.5%;
     padding-right: 5%;
     transition: 0.3s linear;
-    transform: translateX(150px);
     overflow-y: auto;
 
     .posotoin-button-close {

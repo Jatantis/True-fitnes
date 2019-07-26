@@ -234,10 +234,10 @@
   }
 
   //blog
-  //blog
 
   .main-blog {
     padding-left: 5%;
+    padding-bottom: 87px;
     padding-right: 5%;
   }
   .main-blog .main-blog-header-h1 {
@@ -253,9 +253,6 @@
   .main-blog-header-left {
     width: 64%;
   }
-  .main-blog-header .main-blog-header-right {
-    width: 36%;
-  }
   .main-blog-header-left-first-img {
     display: flex;
   }
@@ -268,14 +265,108 @@
     line-height: 18px;
     letter-spacing: 0.03em;
     padding-top: 13px;
-    padding-bottom: 23px;
+    padding-bottom: 15px;
     padding-right: 13px;
   }
   .main-blog-header-left-first-img {
     width: 43%;
-    height: 73%;
+    height: 100%;
     object-fit: cover;
     padding-top: 18px;
     padding-left: 20px;
+  }
+  .main-blog-header-left-first-text-a {
+    font-size: 13px;
+    padding-top: 0px;
+    padding-bottom: 12px;
+  }
+  .main-blog-header-left-first-text-a::after {
+    top: 26px;
+  }
+  .main-blog-header .main-blog-header-right {
+    width: 35%;
+  }
+  .main-blog-header-right {
+    margin-top: 18px;
+  }
+  .main-blog-header-right-h2 {
+    font-size: 19px;
+    line-height: 22px;
+  }
+  .main-blog-header-left-first-text-a {
+    margin-right: 4.5%;
+  }
+  .color-fff {
+    top: 11px;
+  }
+  .main-blog-header-left-last-img {
+    display: flex;
+    width: 41%;
+  }
+  .main-blog-header-left-last-text {
+    width: 59%;
+    padding-left: 28px;
+    padding-top: 47px;
+  }
+  .main-blog-header-left-last-text-h2 {
+    font-size: 19px;
+    line-height: 23px;
+    width: 95%;
+  }
+  .main-blog-header-left-last-text-p {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.03em;
+    color: #444444;
+    padding-top: 3%;
+  }
+  .main-blog-header-left-last-text-a {
+    margin-right: 5.5%;
+    padding-top: 2%;
+    font-size: 13px;
+    padding-bottom: 31px;
+  }
+  .main-blog-header-left-last-text-a::after {
+    top: 36px;
+  }
+  .main-blog-header-left-first-img-logo,
+  .main-blog-header-left-last-img-logo {
+    object-fit: contain;
+  }
+  .main-blog-main-sections-description {
+    padding-top: 5%;
+  }
+  .main-blog-main-sections-description-h2 {
+    font-size: 19px;
+    line-height: 25px;
+  }
+  .main-blog-main-sections-description-p {
+    padding-top: 3%;
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .main-blog-main .main-blog-main-button-send {
+    bottom: 3px;
+    line-height: 25px;
+    height: 36px;
+    font-size: 14px;
+  }
+  .main-blog-header-right-p {
+    font-size: 13px;
+    line-height: 19px;
+    padding-top: 2.5%;
+    padding-right: 10%;
+  }
+
+  //blog-page
+
+  .main-blog-page-h1 {
+    font-size: 34px;
+    padding-top: 2%;
+    padding-bottom: 3%;
+  }
+  .main-blog-page-main {
+    width: 72%;
   }
 }
